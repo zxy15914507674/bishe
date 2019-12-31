@@ -1,0 +1,9 @@
+1  找到unity的安装路径：C:\Program Files\Unity\Editor\Data\Mono\lib\mono\2.0；将其中的
+
+System.ServiceModel.dll
+
+这个DLL文件，放在刚刚在unity中建立Plugins文件夹下
+
+
+2  添加这两个dll文件时，需要把Unity当前的API兼容等级设置为 .NET 2.0（Unity默认设置为.NET 2.0 Subset）,否则会出现错误。
+
