@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "协同天平实验.CSharp", "协同天平实验.CSharp.csproj", "{CA0455D7-C6BC-90C6-83C0-395DEA458975}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA0455D7-C6BC-90C6-83C0-395DEA458975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0455D7-C6BC-90C6-83C0-395DEA458975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0455D7-C6BC-90C6-83C0-395DEA458975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0455D7-C6BC-90C6-83C0-395DEA458975}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
