@@ -1,0 +1,10 @@
+﻿1 添加代码
+git add  xxx
+
+2 提交代码
+
+ git commit -m "总的代码"
+
+3 上传到仓库
+
+git push https://github.com/zxy15914507674/bishe.git master
