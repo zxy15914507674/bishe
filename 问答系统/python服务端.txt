@@ -1,0 +1,59 @@
+﻿代码1
+
+# -*- coding: utf-8 -*-
+from chatterbot import ChatBot    
+import base64
+from  xmlrpc.server import SimpleXMLRPCServer
+import cv2
+import numpy as np
+
+
+# Create a new chat bot named Charlie
+chatbot = ChatBot(
+    'Charlie',
+    trainer='chatterbot.trainers.ListTrainer'
+)
+ 
+chatbot.train([
+    "Hi, can I help you?",
+    "Sure, I'd like to book a flight to Iceland.",
+    "Your flight has been booked."
+])
+def getHelloWorld(msg):
+    # Get a response to the input text 'How are you?'
+    response = chatbot.get_response(msg)
+    print(response)
+    response_str=""+str(response)
+    print(response_str)
+    return  response_str
+
+ 
+if __name__ == '__main__' :
+    server = SimpleXMLRPCServer(("",666), allow_none=True)
+    server.register_function(getHelloWorld, "getHelloWorld")
+    server.serve_forever()
+
+    
+    
+
+
+ 
+
+代码2：
+
+
+# -*- coding: utf-8 -*-
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
+ 
+ 
+my_bot = ChatBot("Training demo",read_only=True)
+my_bot.set_trainer(ListTrainer)
+my_bot.train([
+   "Hello There",
+    "Hi"
+])
+my_bot.train(["你好",
+              "你也很好呀"])
+print(my_bot.get_response("你好"))
+print(my_bot.get_response("Hello"))
