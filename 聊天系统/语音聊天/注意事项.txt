@@ -1,0 +1,5 @@
+1  C#服务端需要运行在云服务器上
+
+2  UNET使用UDP进行通信，所以需要开放端口
+
+3  NetworkStartUI脚本需要挂载到带有NetworkManager脚本的游戏物体上

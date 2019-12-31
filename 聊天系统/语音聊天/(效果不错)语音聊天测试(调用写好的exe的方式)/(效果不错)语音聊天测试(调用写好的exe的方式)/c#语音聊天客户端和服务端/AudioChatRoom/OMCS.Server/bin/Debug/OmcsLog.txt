@@ -1,0 +1,22 @@
+2016/2/29 16:49:30:User:aa01,Source:127.0.0.1:35531,TaskType:Connected,Comment:.
+
+2016/2/29 16:49:43:User:aa01,Source:127.0.0.1:35531,TaskType:Disconnected-0,Comment:LogonTime:2016/2/29 16:49:30.
+
+2016/3/20 18:11:28:User:aa01,Source:127.0.0.1:13868,TaskType:Connected,Comment:.
+
+2016/3/20 18:11:39:User:222,Source:127.0.0.1:13872,TaskType:Connected,Comment:.
+
+2016/3/20 21:02:38:User:aa01,Source:127.0.0.1:20158,TaskType:Connected,Comment:.
+
+2016/3/20 21:02:52:User:3333,Source:127.0.0.1:20160,TaskType:Connected,Comment:.
+
+2016/3/20 21:03:59:User:aa01,Source:127.0.0.1:20162,TaskType:Connected,Comment:.
+
+2016/3/20 21:04:06:User:4444,Source:127.0.0.1:20164,TaskType:Connected,Comment:.
+
+2016/12/2 9:15:11:User:aa01,Source:127.0.0.1:49179,TaskType:Connected,Comment:.
+
+2017/2/14 15:48:55:User:aa01,Source:127.0.0.1:61448,TaskType:Connected,Comment:.
+
+2017/2/14 15:49:15:User:aa02,Source:127.0.0.1:61733,TaskType:Connected,Comment:.
+
