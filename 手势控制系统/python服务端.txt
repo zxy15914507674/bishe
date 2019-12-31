@@ -1,0 +1,71 @@
+import cv2
+import time
+import base64
+import numpy as np
+import os
+from  xmlrpc.server import SimpleXMLRPCServer
+
+
+def HandPositionDetach(image_raw):
+    # 肤色检测之一: YCrCb之Cr分量 + OTSU二值化
+    
+    try:
+        start_time=time.time()
+        image_tmp= base64.b64decode(image_raw)
+        #字节数组转换成numpy可以处理的数组
+        imga = np.frombuffer(image_tmp, np.uint8)
+        #解码数组，获取opencv-python可以处理的图片对象
+        img = cv2.imdecode(imga,cv2.IMREAD_COLOR)
+       
+        ycrcb = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb) # 把图像转换到YUV色域
+        (y, cr, cb) = cv2.split(ycrcb) # 图像分割, 分别获取y, cr, br通道图像
+        
+        
+        # 高斯滤波, cr 是待滤波的源图像数据, (5,5)是值窗口大小, 0 是指根据窗口大小来计算高斯函数标准差
+        cr1 = cv2.GaussianBlur(cr, (5, 5), 0) # 对cr通道分量进行高斯滤波
+        # 根据OTSU算法求图像阈值, 对图像进行二值化
+        _, skin1 = cv2.threshold(cr1, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU) 
+        
+        #找出轮廓
+        (cnts, _) = cv2.findContours(skin1.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+        c = sorted(cnts, key=cv2.contourArea, reverse=True)[0]
+        rect = cv2.minAreaRect(c)
+        box = np.int0(cv2.boxPoints(rect))
+        
+        
+        # 在原图上画出轮廓
+        #draw_img = cv2.drawContours(img.copy(), [box], -1, (0, 0, 255), 3)
+        #cv2.imshow("draw_img", draw_img)
+        
+        
+        #找出轮廓，并在原图上进行裁剪
+        Xs = [i[0] for i in box]
+        Ys = [i[1] for i in box]
+        x1 = min(Xs)
+        x2 = max(Xs)
+        y1 = min(Ys)
+        y2 = max(Ys)
+        pos_x=x1+(x2-x1)/2
+        pos_y=y1+(y2-y1)/2
+        hight = y2 - y1
+        width = x2 - x1
+        end_time=time.time()
+        #cv2.waitKey(0)
+        print("耗时:"+str(end_time-start_time))
+        return str(pos_x)+":"+str(pos_y)+":"+str(width)+":"+str(hight)
+    except:
+        return  ""
+    
+    
+
+
+def getHelloWorld(b_tu):
+    pos=HandPositionDetach(b_tu)
+    return  str(pos)
+ 
+if __name__ == '__main__' :
+    server = SimpleXMLRPCServer(("",666), allow_none=True)
+    server.register_function(getHelloWorld, "getHelloWorld")
+    server.serve_forever()
+
+
