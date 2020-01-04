@@ -21,10 +21,13 @@ namespace DAL
         /// <returns></returns>
         public int AddCompletionQuestion(CompletionQuestion completionQuestionObj)
         {
-            string sql = "insert into CompletionQuestion(expName,sceneName,questionTypeNumber,content,picture,answer,score,teacherName) values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}')";
+            string sql = @"insert into CompletionQuestion(expName,sceneName,questionTypeNumber,content,picture,answer,score,teacherName,
+                           tipMessage,thinkTime)
+                          values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}',{9})";
 
             sql = string.Format(sql, completionQuestionObj.expName, completionQuestionObj.sceneName, completionQuestionObj.questionTypeNumber,
-                completionQuestionObj.content, completionQuestionObj.picture, completionQuestionObj.answer, completionQuestionObj.score, completionQuestionObj.teacherName);
+                completionQuestionObj.content, completionQuestionObj.picture, completionQuestionObj.answer, completionQuestionObj.score, completionQuestionObj.teacherName,
+                completionQuestionObj.tipMessage,completionQuestionObj.thinkTime);
             try
             {
                 return SqlHelper.Update(sql);
@@ -44,7 +47,8 @@ namespace DAL
         /// <returns></returns>
         public CompletionQuestion GetCompletionQuestionInfoById(string id)
         {
-            string sql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score,teacherName from CompletionQuestion where id=" + id;
+            string sql = @"select expName,sceneName,questionTypeNumber,content,picture,answer,score,teacherName,
+                           tipMessage,thinkTime from CompletionQuestion where id=" + id;
             MySqlDataReader reader = null;
             CompletionQuestion completionQuestionObj = null;
             try
@@ -62,7 +66,8 @@ namespace DAL
                     completionQuestionObj.answer = reader["answer"].ToString();
                     completionQuestionObj.score =reader["score"].ToString();
                     completionQuestionObj.teacherName = reader["teacherName"].ToString();
-
+                    completionQuestionObj.tipMessage = reader["tipMessage"].ToString();
+                    completionQuestionObj.thinkTime = Convert.ToInt32(reader["thinkTime"].ToString());
                 }
             }
             catch (Exception)
@@ -90,10 +95,13 @@ namespace DAL
         public int ModifyCompletionQuestion(CompletionQuestion completionQuestionObj)
         {
             string sql = "update  CompletionQuestion set expName='{0}',sceneName='{1}',content='{2}',";
-            sql += "picture='{3}',answer='{4}',score='{5}',teacherName='{6}' where id={7}";
+            sql += @"picture='{3}',answer='{4}',score='{5}',teacherName='{6}',
+                     tipMessage='{7}',thinkTime={8} where id={9}";
 
             sql = string.Format(sql, completionQuestionObj.expName, completionQuestionObj.sceneName, completionQuestionObj.content,
-                 completionQuestionObj.picture, completionQuestionObj.answer, completionQuestionObj.score, completionQuestionObj.teacherName, completionQuestionObj.id
+                 completionQuestionObj.picture, completionQuestionObj.answer, completionQuestionObj.score, completionQuestionObj.teacherName, 
+                 completionQuestionObj.tipMessage,completionQuestionObj.thinkTime,
+                 completionQuestionObj.id
                 );
 
             try

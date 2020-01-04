@@ -34,6 +34,8 @@ namespace 习题管理系统.FrmexerciseManager
                 this.txtAnswer.Text = choiceQuestionObj.answer;
                 this.txtScore.Text = choiceQuestionObj.score;
                 this.txtTeacherName.Text = choiceQuestionObj.teacherName;
+                this.txtTipInfo.Text = choiceQuestionObj.tipMessage;
+                this.txtThinkTime.Text = choiceQuestionObj.thinkTime.ToString();
 
                 if (choiceQuestionObj.picture.Trim().Length > 0)
                 {

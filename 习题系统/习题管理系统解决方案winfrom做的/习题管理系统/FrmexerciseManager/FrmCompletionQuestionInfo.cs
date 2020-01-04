@@ -29,6 +29,9 @@ namespace 习题管理系统.FrmexerciseManager
                 this.txtScore.Text = completionQuestionObj.score.ToString();
                 this.txtTeacherName.Text = completionQuestionObj.teacherName;
 
+                this.txtTipMessage.Text = completionQuestionObj.tipMessage;
+                this.txtThinkTime.Text = completionQuestionObj.thinkTime.ToString();
+
                 if (completionQuestionObj.picture.Trim().Length > 0)
                 {
                     try

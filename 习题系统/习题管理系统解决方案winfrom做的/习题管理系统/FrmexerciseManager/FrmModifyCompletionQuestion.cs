@@ -52,6 +52,8 @@ namespace 习题管理系统.FrmexerciseManager
                 this.txtScore.Text = completionQuestionObj.score.ToString();
                 this.txtAnswer.Text = completionQuestionObj.answer;
                 this.txtTeacherName.Text = completionQuestionObj.teacherName;
+                this.txtTipMessage.Text = completionQuestionObj.tipMessage;
+                this.txtThinkTime.Text = completionQuestionObj.thinkTime.ToString();
 
                 if (completionQuestionObj.picture != null && completionQuestionObj.picture.Trim().Length > 0)
                 {
@@ -163,6 +165,22 @@ namespace 习题管理系统.FrmexerciseManager
                 return;
             }
 
+            if (this.txtTipMessage.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("请填写题目的提示信息", "添加提示");
+                this.txtTipMessage.Focus();
+                return;
+            }
+
+            if (this.txtThinkTime.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("请填写题目思考时长", "添加提示");
+                this.txtThinkTime.Focus();
+                return;
+            }
+
+
+
             if (!DataValidate.IsNumber(this.txtScore.Text.Trim()))
             {
                 MessageBox.Show("输入的分数必须是数字");
@@ -175,6 +193,14 @@ namespace 习题管理系统.FrmexerciseManager
                 this.txtTeacherName.Focus();
                 return;
             }
+
+            if (!DataValidate.IsInteger(this.txtThinkTime.Text.Trim()))
+            {
+                MessageBox.Show("输入的思考时间必须是正整数");
+                this.txtThinkTime.Focus();
+                return;
+            }
+
             if (Program.teacherInfo.teacherName == null || Program.teacherInfo.teacherName.Trim().Length == 0)
             {
                 MessageBox.Show("您进行了非法操作，请重启系统重试");
@@ -202,6 +228,9 @@ namespace 习题管理系统.FrmexerciseManager
             completionQuestion.answer = this.txtAnswer.Text.Trim();
 
             completionQuestion.picture = this.pcAddPicture.Image == null ? "" : new SerializeObjectToString().SerializeObject(this.pcAddPicture.Image);
+
+            completionQuestion.tipMessage = this.txtTipMessage.Text.Trim();            //提示信息
+            completionQuestion.thinkTime = Convert.ToInt32(this.txtThinkTime.Text.Trim()); 
 
             #endregion
 

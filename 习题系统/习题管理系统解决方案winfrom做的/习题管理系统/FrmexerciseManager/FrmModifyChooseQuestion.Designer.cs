@@ -54,12 +54,17 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtTeacherName = new System.Windows.Forms.TextBox();
             this.btnSetNull = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtTipMessage = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtThinkTime = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcAddPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(348, 415);
+            this.btnModify.Location = new System.Drawing.Point(345, 441);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(75, 23);
             this.btnModify.TabIndex = 46;
@@ -112,7 +117,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(543, 415);
+            this.btnCancel.Location = new System.Drawing.Point(543, 441);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 40;
@@ -288,11 +293,59 @@
             this.btnSetNull.UseVisualStyleBackColor = true;
             this.btnSetNull.Click += new System.EventHandler(this.btnSetNull_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(31, 420);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 12);
+            this.label12.TabIndex = 80;
+            this.label12.Text = "提示信息：";
+            // 
+            // txtTipMessage
+            // 
+            this.txtTipMessage.Location = new System.Drawing.Point(108, 409);
+            this.txtTipMessage.Multiline = true;
+            this.txtTipMessage.Name = "txtTipMessage";
+            this.txtTipMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTipMessage.Size = new System.Drawing.Size(363, 26);
+            this.txtTipMessage.TabIndex = 81;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(514, 412);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 12);
+            this.label13.TabIndex = 82;
+            this.label13.Text = "思考时长：";
+            // 
+            // txtThinkTime
+            // 
+            this.txtThinkTime.Location = new System.Drawing.Point(600, 409);
+            this.txtThinkTime.Name = "txtThinkTime";
+            this.txtThinkTime.Size = new System.Drawing.Size(68, 21);
+            this.txtThinkTime.TabIndex = 83;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(683, 412);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(17, 12);
+            this.label14.TabIndex = 84;
+            this.label14.Text = "秒";
+            // 
             // FrmModifyChooseQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 458);
+            this.ClientSize = new System.Drawing.Size(947, 476);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtThinkTime);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtTipMessage);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.btnSetNull);
             this.Controls.Add(this.txtTeacherName);
             this.Controls.Add(this.label11);
@@ -357,5 +410,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTeacherName;
         private System.Windows.Forms.Button btnSetNull;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtTipMessage;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtThinkTime;
+        private System.Windows.Forms.Label label14;
     }
 }

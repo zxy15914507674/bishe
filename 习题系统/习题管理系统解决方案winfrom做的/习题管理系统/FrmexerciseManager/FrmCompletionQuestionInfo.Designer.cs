@@ -40,6 +40,11 @@
             this.txtExpName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTeacherName = new System.Windows.Forms.TextBox();
+            this.txtThinkTime = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTipMessage = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,11 +156,61 @@
             this.txtTeacherName.Size = new System.Drawing.Size(125, 21);
             this.txtTeacherName.TabIndex = 54;
             // 
+            // txtThinkTime
+            // 
+            this.txtThinkTime.Location = new System.Drawing.Point(616, 360);
+            this.txtThinkTime.Name = "txtThinkTime";
+            this.txtThinkTime.ReadOnly = true;
+            this.txtThinkTime.Size = new System.Drawing.Size(100, 21);
+            this.txtThinkTime.TabIndex = 56;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(536, 369);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "思考时长：";
+            // 
+            // txtTipMessage
+            // 
+            this.txtTipMessage.Location = new System.Drawing.Point(118, 360);
+            this.txtTipMessage.Multiline = true;
+            this.txtTipMessage.Name = "txtTipMessage";
+            this.txtTipMessage.ReadOnly = true;
+            this.txtTipMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTipMessage.Size = new System.Drawing.Size(363, 32);
+            this.txtTipMessage.TabIndex = 58;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(31, 363);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 12);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "提示信息：";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(724, 363);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(17, 12);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "秒";
+            // 
             // FrmCompletionQuestionInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 416);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtTipMessage);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtThinkTime);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTeacherName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtExpName);
@@ -192,5 +247,10 @@
         private System.Windows.Forms.TextBox txtExpName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTeacherName;
+        private System.Windows.Forms.TextBox txtThinkTime;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTipMessage;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label5;
     }
 }

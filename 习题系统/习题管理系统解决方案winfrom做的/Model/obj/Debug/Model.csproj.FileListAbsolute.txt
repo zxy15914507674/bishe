@@ -3,3 +3,8 @@ E:\VS2012Project\习题管理系统解决方案\Model\bin\Debug\Model.pdb
 E:\VS2012Project\习题管理系统解决方案\Model\obj\Debug\Model.dll
 E:\VS2012Project\习题管理系统解决方案\Model\obj\Debug\Model.pdb
 E:\VS2012Project\习题管理系统解决方案\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\Model\bin\Debug\Model.dll
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\Model\bin\Debug\Model.pdb
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\Model\obj\Debug\Model.dll
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\Model\obj\Debug\Model.pdb

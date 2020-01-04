@@ -22,10 +22,12 @@ namespace DAL
         /// <returns></returns>
         public int AddShortAnswerQuestion(ShortAnswerQuestion shortAnswerQuestion)
         {
-            string sql = "insert into ShortAnswerQuestion(expName,sceneName,questionTypeNumber,content,picture,answer,score,teacherName,keyword) values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}')";
+            string sql = @"insert into ShortAnswerQuestion(expName,sceneName,questionTypeNumber,content,picture,answer,score,teacherName,keyword,
+                           tipMessage,thinkTime) values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10})";
 
             sql = string.Format(sql, shortAnswerQuestion.expName, shortAnswerQuestion.sceneName, shortAnswerQuestion.questionTypeNumber,
-                shortAnswerQuestion.content, shortAnswerQuestion.picture, shortAnswerQuestion.answer, shortAnswerQuestion.score, shortAnswerQuestion.teacherName,shortAnswerQuestion.keyword);
+                shortAnswerQuestion.content, shortAnswerQuestion.picture, shortAnswerQuestion.answer, shortAnswerQuestion.score, shortAnswerQuestion.teacherName,shortAnswerQuestion.keyword,
+                shortAnswerQuestion.tipMessage,shortAnswerQuestion.thinkTime);
             try
             {
                 return SqlHelper.Update(sql);
@@ -46,7 +48,8 @@ namespace DAL
         /// <returns></returns>
         public ShortAnswerQuestion GetShortAnswerQuestionInfoById(string id)
         {
-            string sql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score,teacherName,keyword from ShortAnswerQuestion where id=" + id;
+            string sql = @"select expName,sceneName,questionTypeNumber,content,picture,answer,score,teacherName,keyword,
+                           tipMessage,thinkTime from ShortAnswerQuestion where id=" + id;
             MySqlDataReader reader = null;
             ShortAnswerQuestion shortAnswerQuestionObj = null;
             try
@@ -65,6 +68,8 @@ namespace DAL
                     shortAnswerQuestionObj.score = reader["score"].ToString();
                     shortAnswerQuestionObj.teacherName = reader["teacherName"].ToString();
                     shortAnswerQuestionObj.keyword = reader["keyword"].ToString();
+                    shortAnswerQuestionObj.tipMessage = reader["tipMessage"].ToString();
+                    shortAnswerQuestionObj.thinkTime = Convert.ToInt32(reader["thinkTime"].ToString());
                 }
             }
             catch (Exception)
@@ -91,10 +96,12 @@ namespace DAL
         public int ModifyShortAnswerQuestion(ShortAnswerQuestion shortAnswerQuestionObj)
         {
             string sql = "update  ShortAnswerQuestion set expName='{0}',sceneName='{1}',content='{2}',";
-            sql += "picture='{3}',answer='{4}',score='{5}',teacherName='{6}',keyword='{7}' where id={8}";
+            sql += @"picture='{3}',answer='{4}',score='{5}',teacherName='{6}',keyword='{7}',
+                     tipMessage='{8}',thinkTime={9} where id={10}";
 
             sql = string.Format(sql, shortAnswerQuestionObj.expName, shortAnswerQuestionObj.sceneName, shortAnswerQuestionObj.content,
-                 shortAnswerQuestionObj.picture, shortAnswerQuestionObj.answer, shortAnswerQuestionObj.score, shortAnswerQuestionObj.teacherName,shortAnswerQuestionObj.keyword,shortAnswerQuestionObj.id
+                 shortAnswerQuestionObj.picture, shortAnswerQuestionObj.answer, shortAnswerQuestionObj.score, shortAnswerQuestionObj.teacherName,shortAnswerQuestionObj.keyword,
+                 shortAnswerQuestionObj.tipMessage,shortAnswerQuestionObj.thinkTime, shortAnswerQuestionObj.id
                 );
 
             try

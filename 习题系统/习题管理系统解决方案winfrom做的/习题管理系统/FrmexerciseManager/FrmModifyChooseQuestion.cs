@@ -59,6 +59,8 @@ namespace 习题管理系统.FrmexerciseManager
                 this.txtScore.Text = choiceQuestionObj.score;
                 this.txtAnswer.Text = choiceQuestionObj.answer;
                 this.txtTeacherName.Text = choiceQuestionObj.teacherName;
+                this.txtTipMessage.Text = choiceQuestionObj.tipMessage;
+                this.txtThinkTime.Text = choiceQuestionObj.thinkTime.ToString();
 
                 if (choiceQuestionObj.picture != null && choiceQuestionObj.picture.Trim().Length > 0)
                 {
@@ -200,6 +202,23 @@ namespace 习题管理系统.FrmexerciseManager
                 return;
             }
 
+
+            if (this.txtTipMessage.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("请填写题目的提示信息", "添加提示");
+                this.txtTipMessage.Focus();
+                return;
+            }
+
+            if (this.txtThinkTime.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("请填写题目思考时长", "添加提示");
+                this.txtThinkTime.Focus();
+                return;
+            }
+
+
+
             if (!DataValidate.IsNumber(this.txtScore.Text.Trim()))
             {
                 MessageBox.Show("输入的分数必须是数字");
@@ -223,6 +242,14 @@ namespace 习题管理系统.FrmexerciseManager
                 MessageBox.Show("参考答案必须是大写的  A、B、C、D,并且只能有一个");
                 return;
             }
+
+            if (!DataValidate.IsInteger(this.txtThinkTime.Text.Trim()))
+            {
+                MessageBox.Show("输入的思考时间必须是正整数");
+                this.txtThinkTime.Focus();
+                return;
+            }
+
             #endregion
 
 
@@ -247,6 +274,9 @@ namespace 习题管理系统.FrmexerciseManager
             choiceQuestion.answer = this.txtAnswer.Text.Trim();
 
             choiceQuestion.picture = this.pcAddPicture.Image == null ? "" : new SerializeObjectToString().SerializeObject(this.pcAddPicture.Image);
+
+            choiceQuestion.tipMessage = this.txtTipMessage.Text.Trim();            //提示信息
+            choiceQuestion.thinkTime = Convert.ToInt32(this.txtThinkTime.Text.Trim()); 
 
             #endregion
 

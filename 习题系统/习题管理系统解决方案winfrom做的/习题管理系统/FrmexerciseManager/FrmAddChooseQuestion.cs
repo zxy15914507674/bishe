@@ -168,11 +168,31 @@ namespace 习题管理系统.FrmexerciseManager
                 this.txtAnswer.Focus();
                 return;
             }
+            if (this.txtTipMessage.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("请填写题目的提示信息","添加提示");
+                this.txtTipMessage.Focus();
+                return;
+            }
+
+            if (this.txtThinkTime.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("请填写题目思考时长", "添加提示");
+                this.txtThinkTime.Focus();
+                return;
+            }
 
             if (!DataValidate.IsNumber(this.txtScore.Text.Trim()))
             {
                 MessageBox.Show("输入的分数必须是数字");
                 this.txtScore.Focus();
+                return;
+            }
+
+            if (!DataValidate.IsInteger(this.txtThinkTime.Text.Trim()))
+            {
+                MessageBox.Show("输入的思考必须是正整数");
+                this.txtThinkTime.Focus();
                 return;
             }
 
@@ -212,6 +232,9 @@ namespace 习题管理系统.FrmexerciseManager
             string score = this.txtScore.Text.Trim();                       //分值
             string answer = this.txtAnswer.Text.Trim();                     //参考答案
 
+            string tipMessage = this.txtTipMessage.Text.Trim();            //提示信息
+            string thinkTime = this.txtThinkTime.Text.Trim();              //思考时长
+
             ChoiceQuestion choiceQuestion = new ChoiceQuestion() { 
                  expName=expName,
                  sceneName=sceneName,
@@ -224,7 +247,9 @@ namespace 习题管理系统.FrmexerciseManager
                  score=score,
                  answer=answer,
                  questionTypeNumber="1",
-                 teacherName=Program.teacherInfo.teacherName
+                 teacherName=Program.teacherInfo.teacherName,
+                 tipMessage=tipMessage,
+                 thinkTime=Convert.ToInt32(thinkTime)
 
             };
             #endregion

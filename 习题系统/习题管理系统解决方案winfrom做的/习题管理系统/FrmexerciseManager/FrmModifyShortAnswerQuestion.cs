@@ -55,7 +55,8 @@ namespace 习题管理系统.FrmexerciseManager
                 this.txtAnswer.Text = shortAnswerQuestionObj.answer;
                 this.txtTeacherName.Text = shortAnswerQuestionObj.teacherName;
                 this.txtKeyword.Text = shortAnswerQuestionObj.keyword;
-
+                this.txtTipMessage.Text = shortAnswerQuestionObj.tipMessage;
+                this.txtThinkTime.Text = shortAnswerQuestionObj.thinkTime.ToString();
                 if (shortAnswerQuestionObj.picture != null && shortAnswerQuestionObj.picture.Trim().Length > 0)
                 {
                     try
@@ -190,10 +191,32 @@ namespace 习题管理系统.FrmexerciseManager
                 return;
             }
 
+            if (this.txtTipMessage.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("请填写题目的提示信息", "添加提示");
+                this.txtTipMessage.Focus();
+                return;
+            }
+
+            if (this.txtThinkTime.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("请填写题目思考时长", "添加提示");
+                this.txtThinkTime.Focus();
+                return;
+            }
+
+
             if (!DataValidate.IsNumber(this.txtScore.Text.Trim()))
             {
                 MessageBox.Show("输入的分值必须是数字");
                 this.txtScore.Focus();
+                return;
+            }
+
+            if (!DataValidate.IsInteger(this.txtThinkTime.Text.Trim()))
+            {
+                MessageBox.Show("输入的思考时间必须是正整数");
+                this.txtThinkTime.Focus();
                 return;
             }
 
@@ -226,6 +249,10 @@ namespace 习题管理系统.FrmexerciseManager
             shortAnswerQuestion.picture = this.pcPicture.Image == null ? "" : new SerializeObjectToString().SerializeObject(this.pcPicture.Image);
 
             shortAnswerQuestion.keyword = this.txtKeyword.Text.Trim();
+
+
+            shortAnswerQuestion.tipMessage = this.txtTipMessage.Text.Trim();            //提示信息
+            shortAnswerQuestion.thinkTime = Convert.ToInt32(this.txtThinkTime.Text.Trim()); 
             #endregion
 
 

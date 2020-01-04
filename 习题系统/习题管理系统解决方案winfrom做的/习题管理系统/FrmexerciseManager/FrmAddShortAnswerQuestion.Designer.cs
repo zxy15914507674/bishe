@@ -47,12 +47,17 @@
             this.txtKeyword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSetNull = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtThinkTime = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtTipMessage = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcAddPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(382, 382);
+            this.btnAdd.Location = new System.Drawing.Point(380, 417);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 54;
@@ -62,7 +67,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(569, 382);
+            this.btnCancel.Location = new System.Drawing.Point(570, 417);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 53;
@@ -72,15 +77,15 @@
             // 
             // txtScore
             // 
-            this.txtScore.Location = new System.Drawing.Point(117, 337);
+            this.txtScore.Location = new System.Drawing.Point(615, 342);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(125, 21);
+            this.txtScore.Size = new System.Drawing.Size(70, 21);
             this.txtScore.TabIndex = 52;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(44, 340);
+            this.label6.Location = new System.Drawing.Point(558, 345);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 51;
@@ -220,11 +225,59 @@
             this.btnSetNull.UseVisualStyleBackColor = true;
             this.btnSetNull.Click += new System.EventHandler(this.btnSetNull_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(691, 387);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(17, 12);
+            this.label13.TabIndex = 90;
+            this.label13.Text = "秒";
+            // 
+            // txtThinkTime
+            // 
+            this.txtThinkTime.Location = new System.Drawing.Point(615, 384);
+            this.txtThinkTime.Name = "txtThinkTime";
+            this.txtThinkTime.Size = new System.Drawing.Size(70, 21);
+            this.txtThinkTime.TabIndex = 89;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(537, 390);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 12);
+            this.label12.TabIndex = 88;
+            this.label12.Text = "作答时间：";
+            // 
+            // txtTipMessage
+            // 
+            this.txtTipMessage.Location = new System.Drawing.Point(116, 336);
+            this.txtTipMessage.Multiline = true;
+            this.txtTipMessage.Name = "txtTipMessage";
+            this.txtTipMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTipMessage.Size = new System.Drawing.Size(364, 75);
+            this.txtTipMessage.TabIndex = 87;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(30, 339);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.TabIndex = 86;
+            this.label11.Text = "提示信息：";
+            // 
             // FrmAddShortAnswerQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 443);
+            this.ClientSize = new System.Drawing.Size(961, 449);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtThinkTime);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtTipMessage);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnSetNull);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtKeyword);
@@ -275,5 +328,10 @@
         private System.Windows.Forms.TextBox txtKeyword;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSetNull;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtThinkTime;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtTipMessage;
+        private System.Windows.Forms.Label label11;
     }
 }

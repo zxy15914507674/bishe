@@ -54,7 +54,9 @@ answer varchar(10) not null,
 
 score varchar(10) not null,
 
-teacherName varchar(10) not null
+teacherName varchar(10) not null,
+tipMessage varchar(500) not null,
+thinkTime int not null
 )
 
 auto_increment=10000,default charset=utf8;
@@ -85,7 +87,10 @@ picture mediumtext,
 answer text not null,
 
 score varchar(10) not null,
-teacherName varchar(10) not null
+teacherName varchar(10) not null,
+tipMessage varchar(500) not null,
+thinkTime int not null
+
 
 )
 
@@ -119,7 +124,10 @@ keyword text not null,
 
 score varchar(10) not null,
 
-teacherName varchar(10) not null)
+teacherName varchar(10) not null,
+tipMessage varchar(500) not null,
+thinkTime int not null
+)
 auto_increment=30000,default charset=utf8;
 
 

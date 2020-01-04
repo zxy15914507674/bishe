@@ -30,6 +30,8 @@ namespace 习题管理系统.FrmexerciseManager
                 this.txtScore.Text = shortAnswerQuestion.score;
                 this.txtTeacherName.Text = shortAnswerQuestion.teacherName;
                 this.txtKeyword.Text = shortAnswerQuestion.keyword;
+                this.txtTipInfo.Text = shortAnswerQuestion.tipMessage;
+                this.txtThinkTime.Text = shortAnswerQuestion.thinkTime.ToString();
 
                 if (shortAnswerQuestion.picture.Trim().Length > 0)
                 {

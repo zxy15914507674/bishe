@@ -89,5 +89,16 @@ namespace Model
         /// </summary>
         public string labRoom { set; get; }
 
+
+        /// <summary>
+        /// 提示信息
+        /// </summary>
+        public string tipMessage { set; get; }
+
+        /// <summary>
+        /// 作答时长
+        /// </summary>
+        public int thinkTime { set; get; }
+
     }
 }

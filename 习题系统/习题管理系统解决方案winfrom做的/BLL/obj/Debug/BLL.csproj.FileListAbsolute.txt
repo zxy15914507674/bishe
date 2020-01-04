@@ -9,3 +9,14 @@ E:\VS2012Project\习题管理系统解决方案\BLL\obj\Debug\BLL.dll
 E:\VS2012Project\习题管理系统解决方案\BLL\obj\Debug\BLL.pdb
 E:\VS2012Project\习题管理系统解决方案\BLL\bin\Debug\MySql.Data.dll
 E:\VS2012Project\习题管理系统解决方案\BLL\bin\Debug\DAL.Helper.dll
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\bin\Debug\BLL.dll
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\bin\Debug\BLL.pdb
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\bin\Debug\DAL.dll
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\bin\Debug\Model.dll
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\bin\Debug\MySql.Data.dll
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\bin\Debug\DAL.Helper.dll
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\bin\Debug\DAL.pdb
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\bin\Debug\Model.pdb
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\obj\Debug\BLL.dll
+F:\GitProject\毕设\习题系统\习题管理系统解决方案winfrom做的\BLL\obj\Debug\BLL.pdb
