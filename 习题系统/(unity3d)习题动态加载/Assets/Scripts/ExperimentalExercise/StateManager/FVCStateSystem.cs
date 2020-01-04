@@ -16,10 +16,10 @@ namespace FVCPosExamUiController
         //private GameObject _ScoreUI;                            //显示分数的UI
 
 
-        private Button _ChoiceQuestionBtnPrevious;
-        private Button _ChoiceQuestionBtnNext;                  //选择题界面中的  按钮 '上一题' 和 '下一题'
-        private Button _CompletionQuestionBtnPrevious;
-        private Button _CompletionQuestionBtnNext;              //填空题界面中的  '按钮' '上一题' 和 '下一题'
+        //private Button _ChoiceQuestionBtnPrevious;
+        //private Button _ChoiceQuestionBtnNext;                  //选择题界面中的  按钮 '上一题' 和 '下一题'
+        //private Button _CompletionQuestionBtnPrevious;
+        //private Button _CompletionQuestionBtnNext;              //填空题界面中的  '按钮' '上一题' 和 '下一题'
 
 
 
@@ -36,11 +36,11 @@ namespace FVCPosExamUiController
             //_ScoreUI = GameObject.Find("ScoreUI");
 
 
-            _ChoiceQuestionBtnPrevious = GameObject.Find("ChoiceQuestionUI/BtnPrevious").GetComponent<Button>();
-            _ChoiceQuestionBtnNext = GameObject.Find("ChoiceQuestionUI/BtnNext").GetComponent<Button>();
+            //_ChoiceQuestionBtnPrevious = GameObject.Find("ChoiceQuestionUI/BtnPrevious").GetComponent<Button>();
+            //_ChoiceQuestionBtnNext = GameObject.Find("ChoiceQuestionUI/BtnNext").GetComponent<Button>();
 
-            _CompletionQuestionBtnPrevious = GameObject.Find("CompletionQuestionUI/BtnPrevious").GetComponent<Button>();
-            _CompletionQuestionBtnNext = GameObject.Find("CompletionQuestionUI/BtnNext").GetComponent<Button>();
+           // _CompletionQuestionBtnPrevious = GameObject.Find("CompletionQuestionUI/BtnPrevious").GetComponent<Button>();
+           // _CompletionQuestionBtnNext = GameObject.Find("CompletionQuestionUI/BtnNext").GetComponent<Button>();
 
 
 
@@ -64,8 +64,8 @@ namespace FVCPosExamUiController
                     {
                         _ChoiceQuestionState = new FVCChoiceQuestionState(_ChoiceQuestionUI, _SceneName);
                         //上一题和下一题按钮动态注册事件
-                        _ChoiceQuestionBtnPrevious.onClick.AddListener(_ChoiceQuestionState.PreviousQuestion);
-                        _ChoiceQuestionBtnNext.onClick.AddListener(_ChoiceQuestionState.NextQuestion);
+                        //_ChoiceQuestionBtnPrevious.onClick.AddListener(_ChoiceQuestionState.PreviousQuestion);
+                        //_ChoiceQuestionBtnNext.onClick.AddListener(_ChoiceQuestionState.NextQuestion);
                     }
                     else
                     {
@@ -80,8 +80,8 @@ namespace FVCPosExamUiController
                     if (FVCStateStaticParams.CompletionQuestionList == null)
                     {
                         _CompletionQuestionState = new FVCCompletionQuestionState(_CompletionQuestionUI, _SceneName);
-                        _CompletionQuestionBtnPrevious.onClick.AddListener(_CompletionQuestionState.PreviousQuestion);
-                        _CompletionQuestionBtnNext.onClick.AddListener(_CompletionQuestionState.NextQuestion);
+                        //_CompletionQuestionBtnPrevious.onClick.AddListener(_CompletionQuestionState.PreviousQuestion);
+                        //_CompletionQuestionBtnNext.onClick.AddListener(_CompletionQuestionState.NextQuestion);
                     }
                     else
                     {
