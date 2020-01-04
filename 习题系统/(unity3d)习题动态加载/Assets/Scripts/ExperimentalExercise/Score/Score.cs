@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace fvc.exp.score
 {
-    public class FVCScore
+    public class Score
     {
         private float _ConvertScore = 20f;                      //折合的分数
         /// <summary>
@@ -18,9 +18,9 @@ namespace fvc.exp.score
             float ScoreSum = 0;
 
             //计算选择题的分数
-            if (FVCStateStaticParams.ChoiceQuestionList != null && FVCStateStaticParams.ChoiceQuestionList.Count > 0)
+            if (StateStaticParams.ChoiceQuestionList != null && StateStaticParams.ChoiceQuestionList.Count > 0)
             {
-                foreach (var choiceQuestion in FVCStateStaticParams.ChoiceQuestionList)
+                foreach (var choiceQuestion in StateStaticParams.ChoiceQuestionList)
                 {
                     
                     //计算选择题的每一道题的得分
@@ -55,24 +55,24 @@ namespace fvc.exp.score
                         ChoiceQuestionScoreInfoObj.score = Convert.ToSingle(choiceQuestion.score);
 
                         //为了防止重复添加
-                        for (int index = FVCStateStaticParams.ChoiceQuestionScoreInfoList.Count-1; index >= 0; index--) 
+                        for (int index = StateStaticParams.ChoiceQuestionScoreInfoList.Count-1; index >= 0; index--) 
                         {
-                            if (FVCStateStaticParams.ChoiceQuestionScoreInfoList[index].errorNumber == ChoiceQuestionScoreInfoObj.errorNumber)
+                            if (StateStaticParams.ChoiceQuestionScoreInfoList[index].errorNumber == ChoiceQuestionScoreInfoObj.errorNumber)
                             {
-                                FVCStateStaticParams.ChoiceQuestionScoreInfoList.Remove(FVCStateStaticParams.ChoiceQuestionScoreInfoList[index]);
+                                StateStaticParams.ChoiceQuestionScoreInfoList.Remove(StateStaticParams.ChoiceQuestionScoreInfoList[index]);
                             }
                         }
 
                         //把错误的信息添加进集合中
-                        FVCStateStaticParams.ChoiceQuestionScoreInfoList.Add(ChoiceQuestionScoreInfoObj);
+                        StateStaticParams.ChoiceQuestionScoreInfoList.Add(ChoiceQuestionScoreInfoObj);
                     }
                 }
             }
 
             //计算填空题的分数
-            if (FVCStateStaticParams.CompletionQuestionList != null && FVCStateStaticParams.CompletionQuestionList.Count > 0)
+            if (StateStaticParams.CompletionQuestionList != null && StateStaticParams.CompletionQuestionList.Count > 0)
             {
-                foreach (var completionQuestion in FVCStateStaticParams.CompletionQuestionList)
+                foreach (var completionQuestion in StateStaticParams.CompletionQuestionList)
                 {
                     string answer = completionQuestion.answer.Trim();
                     while (answer.IndexOf("  ") > -1)
@@ -103,15 +103,15 @@ namespace fvc.exp.score
                             completionQuestionScoreInfo.answerDic[index]=answerList[index];
 
                             //避免重复添加
-                            for (int listIndex = FVCStateStaticParams.CompletionScoreInfoList.Count - 1; listIndex >= 0; listIndex--)
+                            for (int listIndex = StateStaticParams.CompletionScoreInfoList.Count - 1; listIndex >= 0; listIndex--)
                             {
-                                if (FVCStateStaticParams.CompletionScoreInfoList[listIndex].errorNumber == completionQuestionScoreInfo.errorNumber)
+                                if (StateStaticParams.CompletionScoreInfoList[listIndex].errorNumber == completionQuestionScoreInfo.errorNumber)
                                 {
-                                    FVCStateStaticParams.CompletionScoreInfoList.Remove(FVCStateStaticParams.CompletionScoreInfoList[listIndex]);
+                                    StateStaticParams.CompletionScoreInfoList.Remove(StateStaticParams.CompletionScoreInfoList[listIndex]);
                                 }
                             }
                             //把错误的信息添加进集合中
-                            FVCStateStaticParams.CompletionScoreInfoList.Add(completionQuestionScoreInfo);
+                            StateStaticParams.CompletionScoreInfoList.Add(completionQuestionScoreInfo);
 
                         }
                     }
@@ -134,18 +134,18 @@ namespace fvc.exp.score
             float ScoreSum = 0;
 
             //计算选择题的总分数
-            if (FVCStateStaticParams.ChoiceQuestionList != null && FVCStateStaticParams.ChoiceQuestionList.Count > 0)
+            if (StateStaticParams.ChoiceQuestionList != null && StateStaticParams.ChoiceQuestionList.Count > 0)
             {
-                foreach (var choiceQuestion in FVCStateStaticParams.ChoiceQuestionList)
+                foreach (var choiceQuestion in StateStaticParams.ChoiceQuestionList)
                 {
                     ScoreSum += Convert.ToSingle(choiceQuestion.score);
                 }
             }
 
             //计算填空题的总分数
-            if (FVCStateStaticParams.CompletionQuestionList != null && FVCStateStaticParams.CompletionQuestionList.Count > 0)
+            if (StateStaticParams.CompletionQuestionList != null && StateStaticParams.CompletionQuestionList.Count > 0)
             {
-                foreach (var completionQuestion in FVCStateStaticParams.CompletionQuestionList)
+                foreach (var completionQuestion in StateStaticParams.CompletionQuestionList)
                 {
                     ScoreSum += Convert.ToSingle(completionQuestion.score);
                 }
@@ -169,18 +169,18 @@ namespace fvc.exp.score
             Debug.Log("总得分为: " + ScoreSum);
 
             //测试选择题
-            if (FVCStateStaticParams.ChoiceQuestionScoreInfoList != null && FVCStateStaticParams.ChoiceQuestionScoreInfoList.Count > 0)
+            if (StateStaticParams.ChoiceQuestionScoreInfoList != null && StateStaticParams.ChoiceQuestionScoreInfoList.Count > 0)
             {
-                foreach (var infoItem in FVCStateStaticParams.ChoiceQuestionScoreInfoList)
+                foreach (var infoItem in StateStaticParams.ChoiceQuestionScoreInfoList)
                 {
                     Debug.Log("错误的题号是: "+infoItem.errorNumber+"   您的答案为:"+infoItem.userAnswer+  "   正确答案为:"+infoItem.answer+"   该题的分值为:"+infoItem.score);
                 }
             }
 
             //测试填空题
-            if (FVCStateStaticParams.CompletionScoreInfoList != null && FVCStateStaticParams.CompletionQuestionList.Count > 0)
+            if (StateStaticParams.CompletionScoreInfoList != null && StateStaticParams.CompletionQuestionList.Count > 0)
             {
-                foreach (var infoItem in FVCStateStaticParams.CompletionScoreInfoList)
+                foreach (var infoItem in StateStaticParams.CompletionScoreInfoList)
                 {
                     foreach (var item in infoItem.userAnswerDic)
                     {

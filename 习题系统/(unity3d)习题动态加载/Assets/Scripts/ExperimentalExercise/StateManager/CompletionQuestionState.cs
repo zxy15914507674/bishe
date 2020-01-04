@@ -12,13 +12,13 @@ using UnityEngine.UI;
 
 namespace fvc.exp.state
 {
-    public class FVCCompletionQuestionState : FVCState
+    public class CompletionQuestionState : State
     {
         private GameObject _QuestionUI;
-        private FVCCreateAnswerPanel _createAnswerPanel;
+        private CreateAnswerPanel _createAnswerPanel;
         private int _NumberCount = 0;                                             //保存题目的下标
 
-        public FVCCompletionQuestionState(GameObject QuestionUI, string SceneName)
+        public CompletionQuestionState(GameObject QuestionUI, string SceneName)
         {
             StateEnter(QuestionUI,SceneName);
         }
@@ -28,12 +28,12 @@ namespace fvc.exp.state
         /// </summary>
         public override void NextQuestion()
         {
-            if (FVCStateStaticParams.CompletionQuestionList == null || this._QuestionUI == null)
+            if (StateStaticParams.CompletionQuestionList == null || this._QuestionUI == null)
             {
                 return;
             }
            
-            if (_NumberCount >= FVCStateStaticParams.CompletionQuestionList.Count - 1)
+            if (_NumberCount >= StateStaticParams.CompletionQuestionList.Count - 1)
             {
                 bool saveResult = _SaveAnswer();                     //保存答案
                 if (saveResult == false)
@@ -45,10 +45,10 @@ namespace fvc.exp.state
 
                                       
                // FVCStateStaticParams.currentQuestionType = FVCQuestionType.ShortAnswerQuestion;
-                FVCStateStaticParams.currentQuestionType = FVCQuestionType.Null;
+                StateStaticParams.currentQuestionType = QuestionType.Null;
             }
 
-            if (_NumberCount >= 0 && _NumberCount < FVCStateStaticParams.CompletionQuestionList.Count - 1)
+            if (_NumberCount >= 0 && _NumberCount < StateStaticParams.CompletionQuestionList.Count - 1)
             {
                 bool saveResult = _SaveAnswer();                     //保存答案
                 if (saveResult == false)
@@ -58,7 +58,7 @@ namespace fvc.exp.state
 
 
                 _NumberCount++;
-                _ShowMessageOnUI(this._QuestionUI, FVCStateStaticParams.CompletionQuestionList[_NumberCount]);
+                _ShowMessageOnUI(this._QuestionUI, StateStaticParams.CompletionQuestionList[_NumberCount]);
             }
         }
 
@@ -67,7 +67,7 @@ namespace fvc.exp.state
         /// </summary>
         public override void PreviousQuestion()
         {
-            if (FVCStateStaticParams.CompletionQuestionList == null || this._QuestionUI == null)
+            if (StateStaticParams.CompletionQuestionList == null || this._QuestionUI == null)
             {
                 return;
             }
@@ -82,12 +82,12 @@ namespace fvc.exp.state
                         return;
                     }
                     Debug.Log("切换到选择题");
-                    FVCStateStaticParams.currentQuestionType = FVCQuestionType.ChoiceQuestion;   //切换到选择题
+                    StateStaticParams.currentQuestionType = QuestionType.ChoiceQuestion;   //切换到选择题
                 }
                 return;
             }
 
-            if (_NumberCount >= 0 && _NumberCount <= FVCStateStaticParams.CompletionQuestionList.Count - 1)
+            if (_NumberCount >= 0 && _NumberCount <= StateStaticParams.CompletionQuestionList.Count - 1)
             {
                 bool saveResult = _SaveAnswer();                     //保存答案
                 if (saveResult == false)
@@ -96,7 +96,7 @@ namespace fvc.exp.state
                 }
 
                 _NumberCount--;
-                _ShowMessageOnUI(this._QuestionUI, FVCStateStaticParams.CompletionQuestionList[_NumberCount]);
+                _ShowMessageOnUI(this._QuestionUI, StateStaticParams.CompletionQuestionList[_NumberCount]);
             }
         }
 
@@ -106,7 +106,7 @@ namespace fvc.exp.state
         /// </summary>
         private bool _SaveAnswer()
         {
-            string answer = FVCStateStaticParams.CompletionQuestionList[_NumberCount].answer.Trim();
+            string answer = StateStaticParams.CompletionQuestionList[_NumberCount].answer.Trim();
             while (answer.IndexOf("  ") > -1)
             {
                 answer = answer.Replace("  ", " ");                 //答案中连续多于两个空格的替换成一个的空格
@@ -116,13 +116,13 @@ namespace fvc.exp.state
             {
                 string inputAnswerName = "AnswerPanel/" + "AnswerPanel" + (index + 1) + "/AnswerInput" + (index + 1);
                 InputField inputAnswer = GameObject.Find(inputAnswerName).GetComponent<InputField>();
-                if (FVCStateStaticParams.CompletionQuestionList[_NumberCount].userAnswerDic.ContainsKey(index))
+                if (StateStaticParams.CompletionQuestionList[_NumberCount].userAnswerDic.ContainsKey(index))
                 {
-                    FVCStateStaticParams.CompletionQuestionList[_NumberCount].userAnswerDic[index] = inputAnswer == null ? "" : inputAnswer.text.Trim();
+                    StateStaticParams.CompletionQuestionList[_NumberCount].userAnswerDic[index] = inputAnswer == null ? "" : inputAnswer.text.Trim();
                 }
                 else
                 {
-                    FVCStateStaticParams.CompletionQuestionList[_NumberCount].userAnswerDic.Add(index, inputAnswer == null ? "" : inputAnswer.text.Trim());
+                    StateStaticParams.CompletionQuestionList[_NumberCount].userAnswerDic.Add(index, inputAnswer == null ? "" : inputAnswer.text.Trim());
                 }
                 
             }
@@ -137,27 +137,27 @@ namespace fvc.exp.state
                 return;
             }
             this._QuestionUI = QuestionUI;
-            _createAnswerPanel = new FVCCreateAnswerPanel();
+            _createAnswerPanel = new CreateAnswerPanel();
 
 
             try
             {
-                FVCStateStaticParams.CompletionQuestionList = new CompletionQuestionManager().GetCompletionQuestionInfoBySceneName(SceneName);
+                StateStaticParams.CompletionQuestionList = new CompletionQuestionManager().GetCompletionQuestionInfoBySceneName(SceneName);
             }
             catch (System.Exception)
             {
                 //TODO 提示用户出错了
 
             }
-            if (FVCStateStaticParams.CompletionQuestionList != null && FVCStateStaticParams.CompletionQuestionList.Count > 0)
+            if (StateStaticParams.CompletionQuestionList != null && StateStaticParams.CompletionQuestionList.Count > 0)
             {
                 this._QuestionUI.SetActive(true);
 
-                _ShowMessageOnUI(this._QuestionUI, FVCStateStaticParams.CompletionQuestionList[0]);
+                _ShowMessageOnUI(this._QuestionUI, StateStaticParams.CompletionQuestionList[0]);
             }
             else
             {
-                FVCStateStaticParams.currentQuestionType = FVCQuestionType.ShortAnswerQuestion;        //查询不到数据，直接进入简答题
+                StateStaticParams.currentQuestionType = QuestionType.ShortAnswerQuestion;        //查询不到数据，直接进入简答题
             }
         }
 
@@ -278,14 +278,14 @@ namespace fvc.exp.state
             #endregion
 
             #region 到了最后一题，下一题按钮的名称要变为  '提交'
-            Text btnNextTxt = GameObject.Find("CompletionQuestionUI/BtnNext/Text").GetComponent<Text>();
-            if (FVCStateStaticParams.CompletionQuestionList.Count == 1 || _NumberCount >= FVCStateStaticParams.CompletionQuestionList.Count - 1)
+            //Text btnNextTxt = GameObject.Find("CompletionQuestionUI/BtnNext/Text").GetComponent<Text>();
+            if (StateStaticParams.CompletionQuestionList.Count == 1 || _NumberCount >= StateStaticParams.CompletionQuestionList.Count - 1)
             {
-                btnNextTxt.text = "提  交";
+                //btnNextTxt.text = "提  交";
             }
             else
             {
-                btnNextTxt.text = "下一题";
+                //btnNextTxt.text = "下一题";
             }
             #endregion
         }

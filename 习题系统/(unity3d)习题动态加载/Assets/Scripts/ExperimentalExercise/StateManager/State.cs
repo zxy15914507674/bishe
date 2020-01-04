@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace fvc.exp.state
 {
-    public abstract class FVCState
+    public abstract class State
     {
         /// <summary>
         /// 切换回上一道题的业务逻辑

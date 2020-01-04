@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FVCCreateAnswerPanel
+public class CreateAnswerPanel
 {
 
     private RectTransform  _AnswerPanelTransform;

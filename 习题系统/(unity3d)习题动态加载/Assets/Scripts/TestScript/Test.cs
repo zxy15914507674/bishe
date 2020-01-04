@@ -1,5 +1,4 @@
 ﻿using fvc.exp.score;
-using FVCPosExamUiController;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,13 +14,11 @@ public class Test : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(1))
         {
-            //GameObject.Find("QuestionParent").GetComponent<FVCStateSystem>().StartExperimentalExercise("Scene2");
-            //GetComponent<FVCPreExamUiController>()._OnGameStateChanged(FVCGameState.PostExam);
-            GetComponent<FVCStateSystem>().StartExperimentalExercise("Scene1");
+            GetComponent<StateSystem>().StartExperimentalExercise("Scene1");
         }
         else if (Input.GetMouseButtonDown(2))
         {
-            Debug.Log(new FVCScore().CalculateScore());
+            Debug.Log(new Score().CalculateScore());
         }
 	}
 }

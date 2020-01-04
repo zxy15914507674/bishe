@@ -4,7 +4,7 @@ using System.Collections.Generic;
 /// <summary>
 /// 问题类型的状态
 /// </summary>
-public enum FVCQuestionType
+public enum QuestionType
 {
 	ChoiceQuestion=1,                       //选择题
     CompletionQuestion,                     //填空题

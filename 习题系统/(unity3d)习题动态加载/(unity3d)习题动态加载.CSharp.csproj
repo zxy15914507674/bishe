@@ -91,7 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ExperimentalExercise\Common\SerializeObjectToString.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\CompletionQuestion\FVCCreateAnswerPanel.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\CompletionQuestion\CreateAnswerPanel.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\BLL\ChoiceQuestionManager.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\BLL\CompletionQuestionManager.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\DAL\ChoiceQuestionService.cs" />
@@ -101,15 +101,13 @@
     <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\Model\ChoiceQuestonScoreInfo.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\Model\CompletionQuestion.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\Model\CompletionQuestionScoreInfo.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\Score\FVCScore.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\FVCChoiceQuestionState.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\FVCCompletionQuestionState.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\FVCQuestionType.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\FVCState.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\FVCStateStaticParams.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\FVCStateSystem.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\Ui\FVCGameState.cs" />
-    <Compile Include="Assets\Scripts\ExperimentalExercise\Ui\FVCUiGameStateBase.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\Score\Score.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\ChoiceQuestionState.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\CompletionQuestionState.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\QuestionType.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\State.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\StateStaticParams.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\StateSystem.cs" />
     <Compile Include="Assets\Scripts\TestScript\Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2012\UnityVS.CSharp.targets" />

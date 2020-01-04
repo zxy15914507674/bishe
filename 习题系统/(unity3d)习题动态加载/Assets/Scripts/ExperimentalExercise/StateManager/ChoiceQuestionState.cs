@@ -14,12 +14,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace fvc.exp.state
 {
-    public class FVCChoiceQuestionState : FVCState
+    public class ChoiceQuestionState : State
     {
      
         private GameObject _QuestionUI;                                      //选择题UI界面游戏物体
         private int _NumberCount=0;                                             //保存题目的下标
-        public FVCChoiceQuestionState(GameObject QuestionUI, string SceneName)
+        public ChoiceQuestionState(GameObject QuestionUI, string SceneName)
         {
             StateEnter(QuestionUI,SceneName);
         }
@@ -30,12 +30,12 @@ namespace fvc.exp.state
         /// </summary>
         public override void NextQuestion()
         {
-            if (FVCStateStaticParams.ChoiceQuestionList == null || this._QuestionUI == null)
+            if (StateStaticParams.ChoiceQuestionList == null || this._QuestionUI == null)
             {
                 return;
             }
 
-            if (_NumberCount >= FVCStateStaticParams.ChoiceQuestionList.Count - 1)
+            if (_NumberCount >= StateStaticParams.ChoiceQuestionList.Count - 1)
             {
                 bool saveResult = _SaveAnswer();                     //保存答案
                 if (saveResult == false)
@@ -44,10 +44,10 @@ namespace fvc.exp.state
                 }
 
                 Debug.Log("切换到填空题");
-                FVCStateStaticParams.currentQuestionType = FVCQuestionType.CompletionQuestion;
+                StateStaticParams.currentQuestionType = QuestionType.CompletionQuestion;
             }
 
-            if (_NumberCount >= 0 && _NumberCount < FVCStateStaticParams.ChoiceQuestionList.Count - 1)
+            if (_NumberCount >= 0 && _NumberCount < StateStaticParams.ChoiceQuestionList.Count - 1)
             {
                 bool saveResult = _SaveAnswer();                     //保存答案
                 if (saveResult == false)
@@ -57,7 +57,7 @@ namespace fvc.exp.state
 
 
                 _NumberCount++;
-                _ShowMessageOnUI(this._QuestionUI, FVCStateStaticParams.ChoiceQuestionList[_NumberCount]);
+                _ShowMessageOnUI(this._QuestionUI, StateStaticParams.ChoiceQuestionList[_NumberCount]);
             }
 
             
@@ -70,7 +70,7 @@ namespace fvc.exp.state
         /// </summary>
         public override void PreviousQuestion()
         {
-            if (FVCStateStaticParams.ChoiceQuestionList == null || this._QuestionUI == null)
+            if (StateStaticParams.ChoiceQuestionList == null || this._QuestionUI == null)
             {
                 return;
             }
@@ -80,7 +80,7 @@ namespace fvc.exp.state
                 return;
             }
 
-            if (_NumberCount >= 0 && _NumberCount <= FVCStateStaticParams.ChoiceQuestionList.Count - 1)
+            if (_NumberCount >= 0 && _NumberCount <= StateStaticParams.ChoiceQuestionList.Count - 1)
             {
                bool saveResult= _SaveAnswer();                     //保存答案
                if (saveResult == false)
@@ -89,7 +89,7 @@ namespace fvc.exp.state
                }
 
                 _NumberCount--;
-                _ShowMessageOnUI(this._QuestionUI, FVCStateStaticParams.ChoiceQuestionList[_NumberCount]);
+                _ShowMessageOnUI(this._QuestionUI, StateStaticParams.ChoiceQuestionList[_NumberCount]);
             }
         }
 
@@ -107,19 +107,19 @@ namespace fvc.exp.state
             Toggle ToggleD = GameObject.Find("ToggleD").GetComponent<Toggle>();
             if (ToggleA.isOn)
             {
-                FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer ="A";
+                StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer ="A";
             }
             if (ToggleB.isOn)
             {
-                FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer = "B";
+                StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer = "B";
             }
             if (ToggleC.isOn)
             {
-                FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer = "C";
+                StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer = "C";
             }
             if (ToggleD.isOn)
             {
-                FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer = "D";
+                StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer = "D";
             }
           
            
@@ -143,22 +143,22 @@ namespace fvc.exp.state
             
             try
             {
-                FVCStateStaticParams.ChoiceQuestionList = new ChoiceQuestionManager().GetChoiceQuestionInfoBySceneName(SceneName);
+                StateStaticParams.ChoiceQuestionList = new ChoiceQuestionManager().GetChoiceQuestionInfoBySceneName(SceneName);
             }
             catch (System.Exception)
             {
                 //TODO 提示用户出错了
                  
             }
-            if (FVCStateStaticParams.ChoiceQuestionList != null && FVCStateStaticParams.ChoiceQuestionList.Count > 0)
+            if (StateStaticParams.ChoiceQuestionList != null && StateStaticParams.ChoiceQuestionList.Count > 0)
             {
                 this._QuestionUI.SetActive(true);
 
-                _ShowMessageOnUI(this._QuestionUI, FVCStateStaticParams.ChoiceQuestionList[0]);
+                _ShowMessageOnUI(this._QuestionUI, StateStaticParams.ChoiceQuestionList[0]);
             }
             else
             {
-                FVCStateStaticParams.currentQuestionType = FVCQuestionType.CompletionQuestion;        //查询不到数据，直接进入填空题
+                StateStaticParams.currentQuestionType = QuestionType.CompletionQuestion;        //查询不到数据，直接进入填空题
             }
         }
 
@@ -266,21 +266,21 @@ namespace fvc.exp.state
             ToggleC.isOn = false;
             ToggleD.isOn = false;
 
-            if (FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer != null && FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer.Length > 0)
+            if (StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer != null && StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer.Length > 0)
             {
-                if (FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer == "A")
+                if (StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer == "A")
                 {
                     ToggleA.isOn = true;
                 }
-                else if (FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer == "B")
+                else if (StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer == "B")
                 {
                     ToggleB.isOn = true;
                 }
-                else if (FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer == "C")
+                else if (StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer == "C")
                 {
                     ToggleC.isOn = true;
                 }
-                else if (FVCStateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer == "D")
+                else if (StateStaticParams.ChoiceQuestionList[_NumberCount].UserAnswer == "D")
                 {
                     ToggleD.isOn = true;
                 }
