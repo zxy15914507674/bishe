@@ -6,6 +6,7 @@ using System.Text;
 
 using fvc.exp.model;
 
+
 namespace fvc.exp.dal
 {
 
@@ -40,6 +41,8 @@ namespace fvc.exp.dal
                     choiceQuestionObj.answer = reader["answer"].ToString();
                     choiceQuestionObj.score = reader["score"].ToString();
                     choiceQuestionObj.teacherName = reader["teacherName"].ToString();
+                    choiceQuestionObj.tipMessage = reader["tipMessage"].ToString();
+                    choiceQuestionObj.thinkTime = Convert.ToInt32(reader["thinkTime"]);
                     choiceQuestionList.Add(choiceQuestionObj);
                 }
             }

@@ -11,16 +11,30 @@ using System;
 using System.IO;
 using System.Text;
 using System.Runtime.Serialization.Formatters.Binary;
+using fvc.exp.voice;
 
 namespace fvc.exp.state
 {
     public class ChoiceQuestionState : State
     {
-     
+        TTSManager ttsManager = new TTSManager();
+        AudioSource audioSource;                                             //从主摄像机上获取AudioSource
+        
         private GameObject _QuestionUI;                                      //选择题UI界面游戏物体
         private int _NumberCount=0;                                             //保存题目的下标
         public ChoiceQuestionState(GameObject QuestionUI, string sql)
         {
+            try
+            {
+                audioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();    //从主摄像机上获取AudioSoruce
+                
+            }
+            catch (Exception)
+            {
+
+                Debug.LogError("请在Main Camera上挂载AudioSource组件");
+            }
+            
             StateEnter(QuestionUI,sql);
         }
 
@@ -44,6 +58,8 @@ namespace fvc.exp.state
                 }
 
                 Debug.Log("切换到填空题");
+
+                
                 StateStaticParams.currentQuestionType = QuestionType.CompletionQuestion;
             }
 
@@ -131,25 +147,14 @@ namespace fvc.exp.state
         /// 状态进入，初始化选择题窗体，并加载第一道习题
         /// </summary>
         /// <param name="QuestionUI"></param>
-        public override void StateEnter(GameObject QuestionUI,string sql)
+        public override void StateEnter(GameObject QuestionUI,string nullStr)
         {
-            if (QuestionUI == null || sql == null || sql.Length == 0)
+            if (QuestionUI == null)
             {
                 return;
             }
             this._QuestionUI = QuestionUI;
 
-            
-            
-            try
-            {
-                StateStaticParams.ChoiceQuestionList = new ChoiceQuestionManager().GetChoiceQuestionInfoBySql(sql);
-            }
-            catch (System.Exception)
-            {
-                //TODO 提示用户出错了
-                 
-            }
             if (StateStaticParams.ChoiceQuestionList != null && StateStaticParams.ChoiceQuestionList.Count > 0)
             {
                 this._QuestionUI.SetActive(true);
@@ -158,7 +163,9 @@ namespace fvc.exp.state
             }
             else
             {
+                //ttsManager.CloseCannel();
                 StateStaticParams.currentQuestionType = QuestionType.CompletionQuestion;        //查询不到数据，直接进入填空题
+                
             }
         }
 
@@ -285,8 +292,29 @@ namespace fvc.exp.state
                     ToggleD.isOn = true;
                 }
             }
+
+
+            //TODO  朗读题目  并启动定时器，当定时到达2/3的思考时间时，检查用户是否进行了答案的选择，如果没有选择，提示用户是否需要提示
+            try
+            {
+                ttsManager.ConvertAndPlay(audioSource, choiceQuestion.content);
+                Debug.Log("定时时长:" + choiceQuestion.thinkTime);
+                //TimeManager.Timming(choiceQuestion.thinkTime*2/3, TimeCallBack);
+                GameObject.Find("QuestionParent").GetComponent<TimeManager>().Timming(choiceQuestion.thinkTime * 2 / 3, ttsManager, choiceQuestion.tipMessage, audioSource);
+            }
+            catch (Exception ex)
+            {
+
+                Debug.LogError("朗读出错"+ex.Message);
+            }
+            
             #endregion
         }
+
+
+        
+
+        
     }
 }
 

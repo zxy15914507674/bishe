@@ -82,11 +82,17 @@
     <Reference Include="MySql.Data">
       <HintPath>Assets\Plugins\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="NAudio">
+      <HintPath>Assets\Plugins\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data">
       <HintPath>Assets\Plugins\System.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing">
       <HintPath>Assets\Plugins\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <HintPath>Assets\Plugins\System.ServiceModel.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -109,10 +115,14 @@
     <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\State.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\StateStaticParams.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\StateSystem.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\Timer\TimeManager.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendMessageManager.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendNextOrPreviousQuestionMessage.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendStartExperientalMessage.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendSynchronizationTipMessage.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\VoiceManager\ITTSContract.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\VoiceManager\NAudioPlayer.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\VoiceManager\TTSManager.cs" />
     <Compile Include="Assets\Scripts\TestScript\Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2012\UnityVS.CSharp.targets" />

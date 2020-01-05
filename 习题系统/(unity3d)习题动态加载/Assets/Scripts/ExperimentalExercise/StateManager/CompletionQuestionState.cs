@@ -2,6 +2,7 @@
 using fvc.exp.model;
 using fvc.exp.score;
 using fvc.exp.state;
+using fvc.exp.voice;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,12 +15,25 @@ namespace fvc.exp.state
 {
     public class CompletionQuestionState : State
     {
+        TTSManager ttsManager = new TTSManager();
+        AudioSource audioSource;
         private GameObject _QuestionUI;
         private CreateAnswerPanel _createAnswerPanel;
         private int _NumberCount = 0;                                             //保存题目的下标
 
         public CompletionQuestionState(GameObject QuestionUI, string SceneName)
         {
+            try
+            {
+                audioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();    //从主摄像机上获取AudioSoruce
+
+            }
+            catch (Exception)
+            {
+
+                Debug.LogError("请在Main Camera上挂载AudioSource组件");
+            }
+
             StateEnter(QuestionUI,SceneName);
         }
 
@@ -139,16 +153,6 @@ namespace fvc.exp.state
             this._QuestionUI = QuestionUI;
             _createAnswerPanel = new CreateAnswerPanel();
 
-
-            try
-            {
-                StateStaticParams.CompletionQuestionList = new CompletionQuestionManager().GetCompletionQuestionInfoBySql(completionSqlLocal);
-            }
-            catch (System.Exception)
-            {
-                //TODO 提示用户出错了
-
-            }
             if (StateStaticParams.CompletionQuestionList != null && StateStaticParams.CompletionQuestionList.Count > 0)
             {
                 this._QuestionUI.SetActive(true);
@@ -286,6 +290,19 @@ namespace fvc.exp.state
             else
             {
                 btnNextTxt.text = "下一题";
+            }
+            #endregion
+
+            #region 朗读题目
+            try
+            {
+                ttsManager.ConvertAndPlay(audioSource, completionQuestion.content);
+                GameObject.Find("QuestionParent").GetComponent<TimeManager>().Timming(completionQuestion.thinkTime * 2 / 3, ttsManager, completionQuestion.tipMessage, audioSource);
+            }
+            catch (Exception ex)
+            {
+
+                Debug.LogError("朗读出错" + ex.Message);
             }
             #endregion
         }

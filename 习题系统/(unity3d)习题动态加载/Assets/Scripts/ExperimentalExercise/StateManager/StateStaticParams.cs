@@ -16,5 +16,8 @@ public class StateStaticParams
 
     public static List<ChoiceQuestonScoreInfo> ChoiceQuestionScoreInfoList = new List<ChoiceQuestonScoreInfo>();                     //保存选择题错误信息列表
     public static List<CompletionQuestionScoreInfo> CompletionScoreInfoList = new List<CompletionQuestionScoreInfo>();              //保存填空题错误信息列表
+
+    public static bool StartChoiceQuestion=false;
+    public static bool StartCompletionQuestion=false;
 }
 

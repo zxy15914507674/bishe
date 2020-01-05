@@ -84,16 +84,17 @@ public class StateSystem : MonoBehaviour
             {
                 _CompletionQuestionUI.SetActive(false);
 
-                if (StateStaticParams.ChoiceQuestionList == null)
+                if (StateStaticParams.StartChoiceQuestion)
                 {
+                    Debug.Log("Enter 选择题");
                     _ChoiceQuestionState = new ChoiceQuestionState(_ChoiceQuestionUI, choiceSqlLocal);
                     //上一题和下一题按钮动态注册事件
                     _ChoiceQuestionBtnPrevious.onClick.AddListener(ChoiceQuestionBtnPreviousClick);
                     _ChoiceQuestionBtnNext.onClick.AddListener(ChoiceQuestionBtnNextClick);
                     //_ChoiceQuestionBtnPrevious.onClick.AddListener(_ChoiceQuestionState.PreviousQuestion);
                     //_ChoiceQuestionBtnNext.onClick.AddListener(_ChoiceQuestionState.NextQuestion);
-                    
 
+                    StateStaticParams.StartChoiceQuestion = false;
                    
                 }
                 else
@@ -106,8 +107,9 @@ public class StateSystem : MonoBehaviour
                 _ChoiceQuestionUI.SetActive(false);
 
 
-                if (StateStaticParams.CompletionQuestionList == null)
+                if (StateStaticParams.StartCompletionQuestion)
                 {
+                    Debug.Log("Enter 填空题");
                     _CompletionQuestionState = new CompletionQuestionState(_CompletionQuestionUI, completionSqlLocal);
                     _CompletionQuestionBtnPrevious.onClick.AddListener(CompletionQuestionBtnPreviousClick);
                     _CompletionQuestionBtnNext.onClick.AddListener(CompletionQuestionBtnNextClick);
@@ -115,7 +117,7 @@ public class StateSystem : MonoBehaviour
                     //_CompletionQuestionBtnPrevious.onClick.AddListener(_CompletionQuestionState.PreviousQuestion);
                     //_CompletionQuestionBtnNext.onClick.AddListener(_CompletionQuestionState.NextQuestion);
 
-                    //TODO   注册进入下一题的事件
+                    StateStaticParams.StartCompletionQuestion = false;
                 }
                 else
                 {
@@ -171,23 +173,23 @@ public class StateSystem : MonoBehaviour
        if (choiceIdList.Count > 3)
        {
            choiceIdWant = CreateRandomNumber.GetRandomNumber(choiceIdList, 3);
-           choiceSql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName from ChoiceQuestion where sceneName='{0}' and id in ({1},{2},{3})";
+           choiceSql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName,tipMessage,thinkTime from ChoiceQuestion where sceneName='{0}' and id in ({1},{2},{3})";
            choiceSql=string.Format(choiceSql, msg, choiceIdWant[0], choiceIdWant[1], choiceIdWant[2]);
        }
        else {
-           choiceSql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName from ChoiceQuestion where sceneName='{0}'";
+           choiceSql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName,tipMessage,thinkTime from ChoiceQuestion where sceneName='{0}'";
            choiceSql=string.Format(choiceSql, msg);
        }
 
        if (completionIdList.Count > 3)
        {
            completionIdWant = CreateRandomNumber.GetRandomNumber(completionIdList, 3);
-           completionSql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score from CompletionQuestion where sceneName='{0}' and id in ({1},{2},{3})";
+           completionSql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score,tipMessage,thinkTime from CompletionQuestion where sceneName='{0}' and id in ({1},{2},{3})";
            completionSql = string.Format(choiceSql, msg, completionIdWant[0], completionIdWant[1], completionIdWant[2]);
        }
        else
        {
-           completionSql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score from CompletionQuestion where sceneName='{0}'";
+           completionSql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score,tipMessage,thinkTime from CompletionQuestion where sceneName='{0}'";
            completionSql = string.Format(completionSql, msg);
        }
        returnSql = choiceSql + "&" + completionSql;
@@ -217,9 +219,38 @@ public class StateSystem : MonoBehaviour
         StateStaticParams.IsStartExercise = false;
         StateStaticParams.ChoiceQuestionList = null;
         StateStaticParams.CompletionQuestionList = null;
-
+        StateStaticParams.StartChoiceQuestion = true;
+        StateStaticParams.StartCompletionQuestion = true;
 
         StateStaticParams.IsStartExercise = true;
+
+
+        //查询选择题中所有的数据
+        try
+        {
+
+            StateStaticParams.ChoiceQuestionList = new ChoiceQuestionManager().GetChoiceQuestionInfoBySql(choiceSqlLocal);
+
+        }
+        catch (System.Exception ex)
+        {
+            //TODO 提示用户出错了
+            Debug.LogError(ex.Message);
+
+        }
+
+        //查询填空题中的数据
+        try
+        {
+            StateStaticParams.CompletionQuestionList = new CompletionQuestionManager().GetCompletionQuestionInfoBySql(completionSqlLocal);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("填空题数据库查询:" + ex.Message);
+            //TODO 提示用户出错了
+
+        }
+
     }
 
 

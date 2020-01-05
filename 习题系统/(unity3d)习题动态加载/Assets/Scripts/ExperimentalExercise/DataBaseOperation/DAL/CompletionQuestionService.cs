@@ -37,7 +37,9 @@ namespace fvc.exp.dal
                     completionQuestionObj.picture = reader["picture"].ToString();
                     completionQuestionObj.answer = reader["answer"].ToString();
                     completionQuestionObj.score = reader["score"].ToString();
-
+                    
+                    completionQuestionObj.tipMessage = reader["tipMessage"].ToString();
+                    completionQuestionObj.thinkTime = Convert.ToInt32(reader["thinkTime"]);
                     completionQuestionObjList.Add(completionQuestionObj);
                 }
             }

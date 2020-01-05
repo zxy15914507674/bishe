@@ -24,39 +24,119 @@ Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载
 Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\I18N.West.dll into Unity Child Domain
 Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\MySql.Data.dll (this message is harmless)
 Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\MySql.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\NAudio.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\NAudio.dll into Unity Child Domain
 Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Data.dll (this message is harmless)
 Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Data.dll into Unity Child Domain
 Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Drawing.dll (this message is harmless)
 Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Drawing.dll into Unity Child Domain
-- Completed reload, in  0.097 seconds
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.ServiceModel.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.ServiceModel.dll into Unity Child Domain
+- Completed reload, in  0.111 seconds
 Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 2.255989 ms
+UnloadTime: 3.394777 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2084 -> priority: 1 
+  Thread -> id: 11c8 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.891807 ms
+UnloadTime: 0.494514 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 634.
-Total: 1.195586 ms (FindLiveObjects: 0.064765 ms CreateObjectMapping: 0.038550 ms MarkObjects: 1.056804 ms  DeleteObjects: 0.014906 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 666.
+Total: 0.922203 ms (FindLiveObjects: 0.046778 ms CreateObjectMapping: 0.034955 ms MarkObjects: 0.806028 ms  DeleteObjects: 0.011309 ms)
 
 Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Xml.dll (this message is harmless)
 Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Xml.Linq.dll (this message is harmless)
 Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Transactions.dll (this message is harmless)
 Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Configuration.dll (this message is harmless)
+Enter 选择题
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.IdentityModel.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\Mono.Security.dll (this message is harmless)
 Fallback handler could not load library F:/GitProject/毕设/习题系统/(unity3d)习题动态加载/Test_Data/Mono/libc
 Fallback handler could not load library F:/GitProject/毕设/习题系统/(unity3d)习题动态加载/Test_Data/Mono/.\libc
 Fallback handler could not load library F:/GitProject/毕设/习题系统/(unity3d)习题动态加载/Test_Data/Mono/libc
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Security.dll (this message is harmless)
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=36033, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+定时时长:12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=35038, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+定时时长:15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=35589, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=37625, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+定时时长:12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=31182, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 切换到填空题
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:52889}
+Enter 填空题
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=36033, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=34929, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=35038, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=35589, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=37625, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=31182, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:63862}
 ServerDisconnected due to error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+析构函数调用
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+析构函数调用
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
