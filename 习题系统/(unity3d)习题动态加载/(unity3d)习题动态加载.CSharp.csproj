@@ -90,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ExperimentalExercise\Common\CreateRandomNumber.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\Common\SerializeObjectToString.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\CompletionQuestion\CreateAnswerPanel.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\BLL\ChoiceQuestionManager.cs" />
@@ -108,6 +109,10 @@
     <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\State.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\StateStaticParams.cs" />
     <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\StateSystem.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendMessageManager.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendNextOrPreviousQuestionMessage.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendStartExperientalMessage.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendSynchronizationTipMessage.cs" />
     <Compile Include="Assets\Scripts\TestScript\Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2012\UnityVS.CSharp.targets" />

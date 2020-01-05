@@ -17,9 +17,9 @@ namespace fvc.exp.dal
         /// </summary>
         /// <param name="sceneName">场景名称</param>
         /// <returns></returns>
-        public List<ChoiceQuestion> GetChoiceQuestionInfoBySceneName(string sceneName)
+        public List<ChoiceQuestion> GetChoiceQuestionInfoBySql(string sql)
         {
-            string sql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName from ChoiceQuestion where sceneName='" + sceneName+"'";
+            //string sql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName from ChoiceQuestion where sceneName='" + sceneName+"'";
             MySqlDataReader reader = null;
             List<ChoiceQuestion> choiceQuestionList = new List<ChoiceQuestion>();
             try
@@ -101,6 +101,42 @@ namespace fvc.exp.dal
                 }
             }
             return choiceQuestionObj;
+        }
+
+
+
+        /// <summary>
+        /// 通过场景名称获取所有的id号
+        /// </summary>
+        /// <param name="sceneName">场景名称</param>
+        /// <returns></returns>
+        public List<string> GetAllIdNumber(string sceneName)
+        {
+            string sql = "select id from ChoiceQuestion where sceneName='" + sceneName + "'";
+            MySqlDataReader reader = null;
+            List<string> IdList = new List<string>();
+            try
+            {
+                reader = SqlHelper.GetReader(sql);
+                while (reader.Read())
+                {
+                    IdList.Add(reader["id"].ToString());
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+
+            return IdList;
         }
     }
 }

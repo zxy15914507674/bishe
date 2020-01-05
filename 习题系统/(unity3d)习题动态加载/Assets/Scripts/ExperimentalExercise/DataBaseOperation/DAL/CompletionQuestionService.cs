@@ -18,14 +18,14 @@ namespace fvc.exp.dal
         /// </summary>
         /// <param name="sceneName">场景名称</param>
         /// <returns></returns>
-        public List<CompletionQuestion> GetCompletionQuestionInfoBySceneName(string sceneName) 
+        public List<CompletionQuestion> GetCompletionQuestionInfoBySql(string completionSqlLocal) 
         {
-            string sql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score from CompletionQuestion where sceneName='" +sceneName+"'";
+            //string sql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score from CompletionQuestion where sceneName='" +sceneName+"'";
             MySqlDataReader reader = null;
             List<CompletionQuestion> completionQuestionObjList = new List<CompletionQuestion>();
             try
             {
-                reader = SqlHelper.GetReader(sql);
+                reader = SqlHelper.GetReader(completionSqlLocal);
                 while(reader.Read())
                 {
                     CompletionQuestion completionQuestionObj = new CompletionQuestion();
@@ -99,6 +99,41 @@ namespace fvc.exp.dal
                 }
             }
             return completionQuestionObj;
+        }
+
+
+        
+        /// <summary>
+        /// 通过场景名称获取所有的id号
+        /// </summary>
+        /// <param name="sceneName">场景名称</param>
+        /// <returns></returns>
+        public List<string> GetAllIdNumber(string sceneName) {
+            string sql = "select id from CompletionQuestion where sceneName='" + sceneName + "'";
+            MySqlDataReader reader = null;
+            List<string> IdList = new List<string>();
+            try
+            {
+                reader = SqlHelper.GetReader(sql);
+                while (reader.Read())
+                {
+                    IdList.Add(reader["id"].ToString());
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+
+            return IdList;
         }
 
 

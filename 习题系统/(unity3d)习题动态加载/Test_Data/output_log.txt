@@ -7,61 +7,56 @@ Direct3D:
     VRAM:     1008 MB
     Driver:   20.19.15.4463
 Begin MonoManager ReloadAssembly
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\I18N.dll (this message is harmless)
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\I18N.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\I18N.dll into Unity Child Domain
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\I18N.West.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\I18N.West.dll into Unity Child Domain
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\MySql.Data.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\MySql.Data.dll into Unity Child Domain
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.Data.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.Data.dll into Unity Child Domain
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.Drawing.dll (this message is harmless)
-Loading F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.Drawing.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\I18N.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\I18N.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\I18N.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\I18N.West.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\I18N.West.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\MySql.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\MySql.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Drawing.dll (this message is harmless)
+Loading F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Drawing.dll into Unity Child Domain
 - Completed reload, in  0.097 seconds
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 1.530299 ms
+UnloadTime: 2.255989 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 7ac -> priority: 1 
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.Xml.dll (this message is harmless)
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.Xml.Linq.dll (this message is harmless)
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.Transactions.dll (this message is harmless)
-Platform assembly: F:\GitProject\毕设\习题动态加载\Test_Data\Managed\System.Configuration.dll (this message is harmless)
-Fallback handler could not load library F:/GitProject/毕设/习题动态加载/Test_Data/Mono/libc
-Fallback handler could not load library F:/GitProject/毕设/习题动态加载/Test_Data/Mono/.\libc
-Fallback handler could not load library F:/GitProject/毕设/习题动态加载/Test_Data/Mono/libc
+  Thread -> id: 2084 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.891807 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 634.
+Total: 1.195586 ms (FindLiveObjects: 0.064765 ms CreateObjectMapping: 0.038550 ms MarkObjects: 1.056804 ms  DeleteObjects: 0.014906 ms)
+
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Xml.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Xml.Linq.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Transactions.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\习题系统\(unity3d)习题动态加载\Test_Data\Managed\System.Configuration.dll (this message is harmless)
+Fallback handler could not load library F:/GitProject/毕设/习题系统/(unity3d)习题动态加载/Test_Data/Mono/libc
+Fallback handler could not load library F:/GitProject/毕设/习题系统/(unity3d)习题动态加载/Test_Data/Mono/.\libc
+Fallback handler could not load library F:/GitProject/毕设/习题系统/(unity3d)习题动态加载/Test_Data/Mono/libc
 切换到填空题
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-切换到简答题
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-切换到简答题
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-切换到简答题
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-切换到选择题
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:52889}
+ServerDisconnected due to error: Timeout
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 

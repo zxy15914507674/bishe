@@ -19,9 +19,9 @@ namespace fvc.exp.state
      
         private GameObject _QuestionUI;                                      //选择题UI界面游戏物体
         private int _NumberCount=0;                                             //保存题目的下标
-        public ChoiceQuestionState(GameObject QuestionUI, string SceneName)
+        public ChoiceQuestionState(GameObject QuestionUI, string sql)
         {
-            StateEnter(QuestionUI,SceneName);
+            StateEnter(QuestionUI,sql);
         }
 
 
@@ -131,9 +131,9 @@ namespace fvc.exp.state
         /// 状态进入，初始化选择题窗体，并加载第一道习题
         /// </summary>
         /// <param name="QuestionUI"></param>
-        public override void StateEnter(GameObject QuestionUI,string SceneName)
+        public override void StateEnter(GameObject QuestionUI,string sql)
         {
-            if (QuestionUI == null || SceneName== null || SceneName.Length == 0)
+            if (QuestionUI == null || sql == null || sql.Length == 0)
             {
                 return;
             }
@@ -143,7 +143,7 @@ namespace fvc.exp.state
             
             try
             {
-                StateStaticParams.ChoiceQuestionList = new ChoiceQuestionManager().GetChoiceQuestionInfoBySceneName(SceneName);
+                StateStaticParams.ChoiceQuestionList = new ChoiceQuestionManager().GetChoiceQuestionInfoBySql(sql);
             }
             catch (System.Exception)
             {

@@ -20,12 +20,12 @@ namespace fvc.exp.bll
         /// </summary>
         /// <param name="sceneName">场景名称</param>
         /// <returns></returns>
-        public List<ChoiceQuestion> GetChoiceQuestionInfoBySceneName(string sceneName)
+        public List<ChoiceQuestion> GetChoiceQuestionInfoBySql(string sql)
         {
             
             try
             {
-                List<ChoiceQuestion> ChoiceQuestionList=choiceQuestionService.GetChoiceQuestionInfoBySceneName(sceneName);
+                List<ChoiceQuestion> ChoiceQuestionList=choiceQuestionService.GetChoiceQuestionInfoBySql(sql);
 
                 //为题目添加上题号
                 for (int index = 0; index < ChoiceQuestionList.Count; index++)
@@ -58,6 +58,24 @@ namespace fvc.exp.bll
             catch (Exception)
             {
                 
+                throw;
+            }
+        }
+
+
+         /// <summary>
+        /// 通过场景名称获取所有的id号
+        /// </summary>
+        /// <param name="sceneName">场景名称</param>
+        /// <returns></returns>
+        public List<string> GetAllIdNumber(string sceneName) {
+            try
+            {
+                return choiceQuestionService.GetAllIdNumber(sceneName);
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }

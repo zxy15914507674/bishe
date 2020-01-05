@@ -130,9 +130,9 @@ namespace fvc.exp.state
         }
 
 
-        public override void StateEnter(GameObject QuestionUI, string SceneName)
+        public override void StateEnter(GameObject QuestionUI, string completionSqlLocal)
         {
-            if (QuestionUI == null || SceneName == null || SceneName.Length == 0)
+            if (QuestionUI == null || completionSqlLocal == null || completionSqlLocal.Length == 0)
             {
                 return;
             }
@@ -142,7 +142,7 @@ namespace fvc.exp.state
 
             try
             {
-                StateStaticParams.CompletionQuestionList = new CompletionQuestionManager().GetCompletionQuestionInfoBySceneName(SceneName);
+                StateStaticParams.CompletionQuestionList = new CompletionQuestionManager().GetCompletionQuestionInfoBySql(completionSqlLocal);
             }
             catch (System.Exception)
             {
@@ -278,14 +278,14 @@ namespace fvc.exp.state
             #endregion
 
             #region 到了最后一题，下一题按钮的名称要变为  '提交'
-            //Text btnNextTxt = GameObject.Find("CompletionQuestionUI/BtnNext/Text").GetComponent<Text>();
+            Text btnNextTxt = GameObject.Find("CompletionQuestionUI/BtnNext/Text").GetComponent<Text>();
             if (StateStaticParams.CompletionQuestionList.Count == 1 || _NumberCount >= StateStaticParams.CompletionQuestionList.Count - 1)
             {
-                //btnNextTxt.text = "提  交";
+                btnNextTxt.text = "提  交";
             }
             else
             {
-                //btnNextTxt.text = "下一题";
+                btnNextTxt.text = "下一题";
             }
             #endregion
         }
