@@ -12,7 +12,7 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
@@ -73,18 +73,31 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>Assets\Plugins\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>Assets\Plugins\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <HintPath>Assets\Plugins\System.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N">
+      <HintPath>Assets\Plugins\I18N.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>Assets\Plugins\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.West">
+      <HintPath>Assets\Plugins\I18N.West.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>Assets\Plugins\System.Drawing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\RuntimeGizmo\Helpers\ExtVector3.cs" />
-    <Compile Include="Assets\RuntimeGizmo\Helpers\Geometry.cs" />
-    <Compile Include="Assets\RuntimeGizmo\Objects\AxisInfo.cs" />
-    <Compile Include="Assets\RuntimeGizmo\Objects\AxisVectors.cs" />
-    <Compile Include="Assets\RuntimeGizmo\Objects\Enums.cs" />
-    <Compile Include="Assets\RuntimeGizmo\Objects\ExtMathf.cs" />
-    <Compile Include="Assets\RuntimeGizmo\Objects\IntersectPoints.cs" />
-    <Compile Include="Assets\RuntimeGizmo\Objects\Square.cs" />
-    <Compile Include="Assets\RuntimeGizmo\TransformGizmo.cs" />
     <Compile Include="Assets\Scripts\AnimationManager\AnimationManager.cs" />
+    <Compile Include="Assets\Scripts\ChatManager\TextChat\TextChatManager.cs" />
     <Compile Include="Assets\Scripts\ChatManager\VoiceChat\NetworkStartUI.cs" />
     <Compile Include="Assets\Scripts\Client\ClientGameObjectMethod.cs" />
     <Compile Include="Assets\Scripts\Client\ClientWeightObjectMethod.cs" />
@@ -95,6 +108,34 @@
     <Compile Include="Assets\Scripts\Comon\CommonParameter.cs" />
     <Compile Include="Assets\Scripts\Comon\PositionErrorContanst.cs" />
     <Compile Include="Assets\Scripts\Comon\objNameContanst.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\Common\CreateRandomNumber.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\Common\SerializeObjectToString.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\CompletionQuestion\CreateAnswerPanel.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\BLL\ChoiceQuestionManager.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\BLL\CompletionQuestionManager.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\DAL\ChoiceQuestionService.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\DAL\CompletionQuestionService.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\Helper\SqlHelper.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\Model\ChoiceQuestion.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\Model\ChoiceQuestonScoreInfo.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\Model\CompletionQuestion.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\DataBaseOperation\Model\CompletionQuestionScoreInfo.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\Score\Score.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StartExperiment.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\ChoiceQuestionState.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\CompletionQuestionState.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\QuestionType.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\State.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\StateStaticParams.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\StateManager\StateSystem.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\Timer\TimeManager.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendMessageManager.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendNextOrPreviousQuestionMessage.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendStartExperientalMessage.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\UNETManager\SendSynchronizationTipMessage.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\VoiceManager\ITTSContract.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\VoiceManager\NAudioPlayer.cs" />
+    <Compile Include="Assets\Scripts\ExperimentalExercise\VoiceManager\TTSManager.cs" />
     <Compile Include="Assets\Scripts\Hand\FirstPersonView.cs" />
     <Compile Include="Assets\Scripts\Hand\HandCatchComponentPositionReset.cs" />
     <Compile Include="Assets\Scripts\Hand\HandControl.cs" />

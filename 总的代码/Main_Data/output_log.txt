@@ -9,6 +9,7 @@ Direct3D:
 Begin MonoManager ReloadAssembly
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.dll (this message is harmless)
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.UI.dll (this message is harmless)
@@ -17,24 +18,30 @@ Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngi
 Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.037 seconds
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\MySql.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\MySql.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\NAudio.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\NAudio.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.ServiceModel.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\System.ServiceModel.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.West.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.West.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Drawing.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Drawing.dll into Unity Child Domain
+- Completed reload, in  0.108 seconds
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 5.675924 ms
+UnloadTime: 4.206487 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 263c -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.764337 ms
-Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Xml.Linq.dll (this message is harmless)
-Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Xml.dll (this message is harmless)
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 5560.
-Total: 2.619499 ms (FindLiveObjects: 0.444122 ms CreateObjectMapping: 0.285800 ms MarkObjects: 1.838172 ms  DeleteObjects: 0.040094 ms)
-
+  Thread -> id: 218c -> priority: 1 
 Initialize engine version: 5.5.1f1 (88d00a7498cd)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -46,6 +53,7 @@ Direct3D:
 Begin MonoManager ReloadAssembly
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.dll (this message is harmless)
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.UI.dll (this message is harmless)
@@ -54,34 +62,130 @@ Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngi
 Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.055 seconds
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\MySql.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\MySql.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\NAudio.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\NAudio.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.ServiceModel.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\System.ServiceModel.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.West.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\I18N.West.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Drawing.dll (this message is harmless)
+Loading F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Drawing.dll into Unity Child Domain
+- Completed reload, in  0.107 seconds
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 5.145444 ms
+UnloadTime: 3.987528 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2798 -> priority: 1 
+  Thread -> id: 2294 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 10.272384 ms
+UnloadTime: 5.966387 ms
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Xml.Linq.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Xml.dll (this message is harmless)
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 5127.
-Total: 2.423653 ms (FindLiveObjects: 0.554638 ms CreateObjectMapping: 0.380896 ms MarkObjects: 1.434659 ms  DeleteObjects: 0.049860 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 5989.
+Total: 4.392038 ms (FindLiveObjects: 0.526838 ms CreateObjectMapping: 0.498569 ms MarkObjects: 3.321398 ms  DeleteObjects: 0.033923 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.866536 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 5556.
+Total: 5.045832 ms (FindLiveObjects: 0.565388 ms CreateObjectMapping: 0.479551 ms MarkObjects: 3.953605 ms  DeleteObjects: 0.044203 ms)
 
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Xml.Linq.dll (this message is harmless)
 Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Xml.dll (this message is harmless)
-r2
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Transactions.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Configuration.dll (this message is harmless)
+Enter 选择题
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-r2触发
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.IdentityModel.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Transactions.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\Mono.Security.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Configuration.dll (this message is harmless)
+Fallback handler could not load library F:/GitProject/毕设/总的代码/Main_Data/Mono/libc
+Fallback handler could not load library F:/GitProject/毕设/总的代码/Main_Data/Mono/.\libc
+Fallback handler could not load library F:/GitProject/毕设/总的代码/Main_Data/Mono/libc
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Security.dll (this message is harmless)
+Enter 选择题
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-r2触发
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.IdentityModel.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\Mono.Security.dll (this message is harmless)
+Fallback handler could not load library F:/GitProject/毕设/总的代码/Main_Data/Mono/libc
+Fallback handler could not load library F:/GitProject/毕设/总的代码/Main_Data/Mono/.\libc
+Fallback handler could not load library F:/GitProject/毕设/总的代码/Main_Data/Mono/libc
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=34214, Frequency=11025]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:49359}
+定时时长:13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Platform assembly: F:\GitProject\毕设\总的代码\Main_Data\Managed\System.Security.dll (this message is harmless)
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=34214, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+定时时长:13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=13385, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=35977, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+定时时长:12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=35977, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+定时时长:12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=34929, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=34929, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+析构函数调用
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:51157}
+ServerDisconnected due to error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=34929, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+析构函数调用
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
