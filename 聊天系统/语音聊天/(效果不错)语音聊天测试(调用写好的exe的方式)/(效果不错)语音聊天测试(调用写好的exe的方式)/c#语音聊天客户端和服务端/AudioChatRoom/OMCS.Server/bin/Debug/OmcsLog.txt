@@ -20,3 +20,31 @@
 
 2017/2/14 15:49:15:User:aa02,Source:127.0.0.1:61733,TaskType:Connected,Comment:.
 
+2020/1/6 17:03:39 : User:aa01,Source:127.0.0.1:12815,TaskType:Connected,Comment:.
+
+2020/1/6 17:04:17 : User:aa01,Source:127.0.0.1:12815,TaskType:Disconnected-0,Comment:LogonTime:2020/1/6 17:03:39.
+
+2020/1/6 17:07:47 : User:0507458873,Source:183.63.119.46:42023,TaskType:Connected,Comment:.
+
+2020/1/6 17:08:22 : User:0507458873,Source:183.63.119.46:42023,TaskType:Disconnected-0,Comment:LogonTime:2020/1/6 17:07:46.
+
+2020/1/6 17:09:29 : User:0509285893,Source:183.63.119.46:25297,TaskType:Connected,Comment:.
+
+2020/1/6 17:09:33 : User:0509285893,Source:183.63.119.46:25297,TaskType:Disconnected-0,Comment:LogonTime:2020/1/6 17:09:29.
+
+2020/1/6 17:10:25 : User:0510241643,Source:183.63.119.46:36556,TaskType:Connected,Comment:.
+
+2020/1/6 17:10:45 : User:0510444283,Source:183.63.119.46:34135,TaskType:Connected,Comment:.
+
+2020/1/6 17:11:45 : User:0510444283,Source:183.63.119.46:34135,TaskType:Disconnected-0,Comment:LogonTime:2020/1/6 17:10:45.
+
+2020/1/6 17:11:49 : User:0510241643,Source:183.63.119.46:36556,TaskType:Disconnected-0,Comment:LogonTime:2020/1/6 17:10:25.
+
+2020/1/6 17:17:38 : User:0517375913,Source:183.63.119.46:13657,TaskType:Connected,Comment:.
+
+2020/1/6 17:18:02 : User:0518008113,Source:183.63.119.46:59786,TaskType:Connected,Comment:.
+
+2020/1/6 17:19:28 : User:0518008113,Source:183.63.119.46:59786,TaskType:Disconnected-0,Comment:LogonTime:2020/1/6 17:18:02.
+
+2020/1/6 17:19:30 : User:0517375913,Source:183.63.119.46:13657,TaskType:Disconnected-0,Comment:LogonTime:2020/1/6 17:17:38.
+

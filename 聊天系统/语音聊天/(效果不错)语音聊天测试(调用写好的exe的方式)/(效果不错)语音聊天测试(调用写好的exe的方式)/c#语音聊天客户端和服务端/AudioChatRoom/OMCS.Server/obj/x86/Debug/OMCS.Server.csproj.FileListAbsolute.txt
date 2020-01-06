@@ -171,16 +171,3 @@ E:\傲瑞更换DLL\OMCS\AudioChatRoom\OMCS.Server\obj\x86\Debug\OMCS.Server.cspr
 E:\傲瑞更换DLL\OMCS\AudioChatRoom\OMCS.Server\obj\x86\Debug\OMCS.Server.csproj.CopyComplete
 E:\傲瑞更换DLL\OMCS\AudioChatRoom\OMCS.Server\obj\x86\Debug\OMCS.Server.exe
 E:\傲瑞更换DLL\OMCS\AudioChatRoom\OMCS.Server\obj\x86\Debug\OMCS.Server.pdb
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\bin\Debug\OMCS.Server.exe.config
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\obj\x86\Debug\OMCS.Server.exe
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\obj\x86\Debug\OMCS.Server.pdb
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\bin\Debug\OMCS.Server.exe
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\bin\Debug\OMCS.Server.pdb
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\bin\Debug\CSkin.dll
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\bin\Debug\ESBasic.dll
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\bin\Debug\OMCS.dll
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\bin\Debug\ESBasic.xml
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\bin\Debug\OMCS.xml
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\obj\x86\Debug\OMCS.Server.csprojResolveAssemblyReference.cache
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\obj\x86\Debug\OMCS.Server.Properties.Resources.resources
-C:\Users\Administrator\Desktop\AudioChatRoom1\AudioChatRoom\OMCS.Server\obj\x86\Debug\OMCS.Server.csproj.GenerateResource.Cache
