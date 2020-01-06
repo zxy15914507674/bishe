@@ -185,7 +185,7 @@ public class StateSystem : MonoBehaviour
        {
            completionIdWant = CreateRandomNumber.GetRandomNumber(completionIdList, 3);
            completionSql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score,tipMessage,thinkTime from CompletionQuestion where sceneName='{0}' and id in ({1},{2},{3})";
-           completionSql = string.Format(choiceSql, msg, completionIdWant[0], completionIdWant[1], completionIdWant[2]);
+           completionSql = string.Format(completionSql, msg, completionIdWant[0], completionIdWant[1], completionIdWant[2]);
        }
        else
        {
@@ -213,6 +213,7 @@ public class StateSystem : MonoBehaviour
         choiceSqlLocal = sqlArray[0];
         //填空题的sql语句
         completionSqlLocal = sqlArray[1];
+
 
         //静态数据初始化
         StateStaticParams.currentQuestionType = QuestionType.ChoiceQuestion;                //从选择题开始

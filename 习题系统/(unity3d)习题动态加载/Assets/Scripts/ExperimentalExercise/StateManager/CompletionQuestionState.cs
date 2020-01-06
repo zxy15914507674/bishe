@@ -146,7 +146,7 @@ namespace fvc.exp.state
 
         public override void StateEnter(GameObject QuestionUI, string completionSqlLocal)
         {
-            if (QuestionUI == null || completionSqlLocal == null || completionSqlLocal.Length == 0)
+            if (QuestionUI == null)
             {
                 return;
             }
@@ -185,6 +185,7 @@ namespace fvc.exp.state
             {
                 CompletionQuestionContent.GetComponent<Text>().text = completionQuestion.content;
             }
+           
             #endregion
 
             #region 获取答案需要填空的个数并动态绘制空的个数
@@ -297,6 +298,7 @@ namespace fvc.exp.state
             try
             {
                 ttsManager.ConvertAndPlay(audioSource, completionQuestion.content);
+                GameObject.Find("QuestionParent").GetComponent<TimeManager>().IsCompletionOperation = true;
                 GameObject.Find("QuestionParent").GetComponent<TimeManager>().Timming(completionQuestion.thinkTime * 2 / 3, ttsManager, completionQuestion.tipMessage, audioSource);
             }
             catch (Exception ex)

@@ -21,3 +21,8 @@ insert into TeacherInfo(teacherNumber,teacherName,pwd,adminType) values('2111703
 
 4  最好使用的Visual Studio 的版本为2012
    unity3d的版本不低于Unity 5.5.1
+
+5  把QuestionParent预制体拖拽到场景中，里面的名称不能变，在该游戏物体上需要挂载的脚本有 StateSystem、TimeManager、Test(测试用的)
+
+
+6  把Plungins中的dll全部拷贝，把Scripts文件夹下的ExperimentalExercise里面的内容全部拷贝，Prefalbs中的预制体拷贝QuestionParent即可

@@ -300,6 +300,7 @@ namespace fvc.exp.state
                 ttsManager.ConvertAndPlay(audioSource, choiceQuestion.content);
                 Debug.Log("定时时长:" + choiceQuestion.thinkTime);
                 //TimeManager.Timming(choiceQuestion.thinkTime*2/3, TimeCallBack);
+                GameObject.Find("QuestionParent").GetComponent<TimeManager>().IsChoiceQuestionOperation = true;
                 GameObject.Find("QuestionParent").GetComponent<TimeManager>().Timming(choiceQuestion.thinkTime * 2 / 3, ttsManager, choiceQuestion.tipMessage, audioSource);
             }
             catch (Exception ex)
