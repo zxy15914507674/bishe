@@ -1,4 +1,54 @@
-﻿代码1
+﻿
+最终的代码：
+
+import base64
+from  xmlrpc.server import SimpleXMLRPCServer
+import cv2
+import numpy as np
+from chatterbot import ChatBot 
+from chatterbot.trainers import ListTrainer
+
+chatbot = ChatBot("Training demo",read_only=True)
+chatbot.set_trainer(ListTrainer)
+chatbot.train([
+    "实验原理",
+    "实验原理请看实验前的知道",
+    "你好",
+    "你也很好呀",
+    "砝码放的位置",
+    "左物右码"
+])
+
+def getAnswer(question):
+    response = chatbot.get_response(question)
+    response_str=""+str(response)
+    return  response_str
+def trainQA(questionAndAnswer):
+    print(questionAndAnswer)
+    questionAndAnswerArray=eval(questionAndAnswer)
+    question=questionAndAnswerArray[0]
+    answer=questionAndAnswerArray[1]
+    trainList=[question,answer]
+    chatbot.train(trainList)
+    
+    
+if __name__ == '__main__' :
+    server = SimpleXMLRPCServer(("",666), allow_none=True)
+    server.register_function(getAnswer, "getAnswer")
+    server.register_function(trainQA, "trainQA")
+    server.serve_forever()
+
+
+
+
+
+
+
+
+
+
+
+测试代码1
 
 # -*- coding: utf-8 -*-
 from chatterbot import ChatBot    
@@ -39,7 +89,7 @@ if __name__ == '__main__' :
 
  
 
-代码2：
+测试代码2：
 
 
 # -*- coding: utf-8 -*-
