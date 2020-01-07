@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CookComputing.XmlRpcV2">
+      <HintPath>.\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
     <Reference Include="DotNetSpeech">
       <HintPath>.\DotNetSpeech.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -46,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestureRecognitionService\IHandContract.cs" />
+    <Compile Include="GestureRecognitionService\HandService.cs" />
     <Compile Include="TTSService\ITTSContract.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
