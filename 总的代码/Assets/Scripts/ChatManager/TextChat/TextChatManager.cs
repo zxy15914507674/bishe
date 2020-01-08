@@ -58,7 +58,8 @@ namespace textchat
     }
 
     private void btnPopClick() {
-
+        int count = transform.parent.childCount - 1;//Panel移位
+        transform.SetSiblingIndex(count);//Panel移位
         TextChatUI.GetComponent<RectTransform>().localPosition = new Vector3(0, 0,0);
     }
 

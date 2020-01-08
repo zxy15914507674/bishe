@@ -121,7 +121,7 @@ namespace fvc.exp
             }
             try
             {
-
+                
                 conn.Open();                                                //打开数据库
                 return cmd.ExecuteReader(CommandBehavior.CloseConnection);
             }

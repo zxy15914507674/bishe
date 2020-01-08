@@ -151,6 +151,7 @@ public class StateSystem : MonoBehaviour
         }
         
         startExpMsg.SendMsg(SceneName);
+        
     }
 
 
@@ -161,40 +162,55 @@ public class StateSystem : MonoBehaviour
     /// <returns></returns>
     private string startExpServerReceive(string msg)
     {
-        //根据接收到的场景名称获取各种题型的所有id号
-       List<string> choiceIdList=new ChoiceQuestionManager().GetAllIdNumber(msg);
-       List<string> completionIdList=new CompletionQuestionManager().GetAllIdNumber(msg);
-       List<string> choiceIdWant;
-       List<string> completionIdWant;
-       string choiceSql = "";
-       string completionSql = "";
-       string returnSql = "";
-       //选择题和填空题各随机抽取3题
-       if (choiceIdList.Count > 3)
-       {
-           choiceIdWant = CreateRandomNumber.GetRandomNumber(choiceIdList, 3);
-           choiceSql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName,tipMessage,thinkTime from ChoiceQuestion where sceneName='{0}' and id in ({1},{2},{3})";
-           choiceSql=string.Format(choiceSql, msg, choiceIdWant[0], choiceIdWant[1], choiceIdWant[2]);
-       }
-       else {
-           choiceSql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName,tipMessage,thinkTime from ChoiceQuestion where sceneName='{0}'";
-           choiceSql=string.Format(choiceSql, msg);
-       }
-
-       if (completionIdList.Count > 3)
-       {
-           completionIdWant = CreateRandomNumber.GetRandomNumber(completionIdList, 3);
-           completionSql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score,tipMessage,thinkTime from CompletionQuestion where sceneName='{0}' and id in ({1},{2},{3})";
-           completionSql = string.Format(completionSql, msg, completionIdWant[0], completionIdWant[1], completionIdWant[2]);
-       }
-       else
-       {
-           completionSql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score,tipMessage,thinkTime from CompletionQuestion where sceneName='{0}'";
-           completionSql = string.Format(completionSql, msg);
-       }
-       returnSql = choiceSql + "&" + completionSql;
-       return returnSql;
+        ServerReceiveDelegate serverReceiveDelegate = LoadDataAndGetSql;
+        System.IAsyncResult ir = serverReceiveDelegate.BeginInvoke(msg, null, null);
+        //接收 返回值
+        string res = serverReceiveDelegate.EndInvoke(ir);
+        Debug.Log(res);
+        return res;
     }
+
+    public delegate string ServerReceiveDelegate(string msg);
+
+    private string LoadDataAndGetSql(string msg) {
+        //根据接收到的场景名称获取各种题型的所有id号
+        List<string> choiceIdList = new ChoiceQuestionManager().GetAllIdNumber(msg);
+        List<string> completionIdList = new CompletionQuestionManager().GetAllIdNumber(msg);
+        List<string> choiceIdWant;
+        List<string> completionIdWant;
+        string choiceSql = "";
+        string completionSql = "";
+        string returnSql = "";
+        //选择题和填空题各随机抽取3题
+        if (choiceIdList.Count > 3)
+        {
+            choiceIdWant = CreateRandomNumber.GetRandomNumber(choiceIdList, 3);
+            choiceSql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName,tipMessage,thinkTime from ChoiceQuestion where sceneName='{0}' and id in ({1},{2},{3})";
+            choiceSql = string.Format(choiceSql, msg, choiceIdWant[0], choiceIdWant[1], choiceIdWant[2]);
+        }
+        else
+        {
+            choiceSql = "select expName,sceneName,questionTypeNumber,content,optionA,optionB,optionC,optionD,picture,answer,score,teacherName,tipMessage,thinkTime from ChoiceQuestion where sceneName='{0}'";
+            choiceSql = string.Format(choiceSql, msg);
+        }
+
+        if (completionIdList.Count > 3)
+        {
+            completionIdWant = CreateRandomNumber.GetRandomNumber(completionIdList, 3);
+            completionSql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score,tipMessage,thinkTime from CompletionQuestion where sceneName='{0}' and id in ({1},{2},{3})";
+            completionSql = string.Format(completionSql, msg, completionIdWant[0], completionIdWant[1], completionIdWant[2]);
+        }
+        else
+        {
+            completionSql = "select expName,sceneName,questionTypeNumber,content,picture,answer,score,tipMessage,thinkTime from CompletionQuestion where sceneName='{0}'";
+            completionSql = string.Format(completionSql, msg);
+        }
+        returnSql = choiceSql + "&" + completionSql;
+        return returnSql;
+    }
+
+  
+
 
     /// <summary>
     /// (习题开始时初始化的函数)客户端接收到消息后回调的函数
@@ -225,11 +241,32 @@ public class StateSystem : MonoBehaviour
 
         StateStaticParams.IsStartExercise = true;
 
+        Debug.Log("开启后台线程");
+        //开启后台线程查询数据
+
+        ClientReceiveDelegate clientReceiveDelegate = QuerySqlData;
+        System.IAsyncResult ir = clientReceiveDelegate.BeginInvoke(null, null);
+        //接收 返回值
+        bool res = clientReceiveDelegate.EndInvoke(ir);
+
+        //开始习题按钮不显示
+        GameObject.Find("UIMsgShow").SetActive(false);
+
+    }
+
+    public delegate bool ClientReceiveDelegate();
+
+
+
+    /// <summary>
+    /// 从数据库中查询习题数据
+    /// </summary>
+    private bool QuerySqlData() {
 
         //查询选择题中所有的数据
         try
         {
-
+            Debug.Log("choiceSqlLocal为:" + choiceSqlLocal);
             StateStaticParams.ChoiceQuestionList = new ChoiceQuestionManager().GetChoiceQuestionInfoBySql(choiceSqlLocal);
 
         }
@@ -243,6 +280,7 @@ public class StateSystem : MonoBehaviour
         //查询填空题中的数据
         try
         {
+            Debug.Log("completionSqlLocal为:" + completionSqlLocal);
             StateStaticParams.CompletionQuestionList = new CompletionQuestionManager().GetCompletionQuestionInfoBySql(completionSqlLocal);
         }
         catch (System.Exception ex)
@@ -251,11 +289,7 @@ public class StateSystem : MonoBehaviour
             //TODO 提示用户出错了
 
         }
-
-
-        //开始习题按钮不显示
-        GameObject.Find("UIMsgShow").SetActive(false);
-
+        return true;
     }
 
 
