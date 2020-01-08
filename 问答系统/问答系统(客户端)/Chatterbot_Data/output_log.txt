@@ -1,0 +1,54 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   Intel
+    VRAM:     1008 MB
+    Driver:   20.19.15.4463
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\I18N.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\I18N.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\I18N.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\I18N.West.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\I18N.West.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\MySql.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\MySql.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.ServiceModel.dll (this message is harmless)
+Loading F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.ServiceModel.dll into Unity Child Domain
+- Completed reload, in  0.456 seconds
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 32.198338 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1380 -> priority: 1 
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.Xml.dll (this message is harmless)
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.872641 ms
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.IdentityModel.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\Mono.Security.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.Transactions.dll (this message is harmless)
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 362.
+Total: 1.213644 ms (FindLiveObjects: 0.034954 ms CreateObjectMapping: 0.024673 ms MarkObjects: 1.127800 ms  DeleteObjects: 0.020047 ms)
+
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.Xml.Linq.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.Configuration.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\问答系统\问答系统(客户端)\Chatterbot_Data\Managed\System.Security.dll (this message is harmless)

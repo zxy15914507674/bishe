@@ -1,0 +1,10 @@
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\bin\Debug\BLL.dll
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\bin\Debug\BLL.pdb
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\bin\Debug\DAL.dll
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\bin\Debug\Models.dll
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\bin\Debug\MySql.Data.dll
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\bin\Debug\DAL.pdb
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\bin\Debug\Models.pdb
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\obj\Debug\BLL.dll
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,5 @@
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\Models\bin\Debug\Models.dll
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\Models\bin\Debug\Models.pdb
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\Models\obj\Debug\Models.dll
+F:\GitProject\毕设\问答系统\winform客户端\问题解答并训练系统\Models\obj\Debug\Models.pdb
