@@ -148,6 +148,13 @@
     <Compile Include="Assets\Scripts\Hand\HandControl.cs" />
     <Compile Include="Assets\Scripts\InterferenceMatrix\InterferenceMatrix.cs" />
     <Compile Include="Assets\Scripts\InterferenceMatrix\InterferenceMatrixManager.cs" />
+    <Compile Include="Assets\Scripts\LoginManager\CommonLogin\CommonLoginManager.cs" />
+    <Compile Include="Assets\Scripts\LoginManager\FaceRecognitionManager\FaceLoginUI.cs" />
+    <Compile Include="Assets\Scripts\LoginManager\FaceRecognitionManager\FaceRecognitionManager.cs" />
+    <Compile Include="Assets\Scripts\LoginManager\FaceRecognitionManager\FaceRegeditUI.cs" />
+    <Compile Include="Assets\Scripts\LoginManager\FaceRecognitionManager\IFaceContract.cs" />
+    <Compile Include="Assets\Scripts\LoginManager\LoginDBOperation\UserInfo.cs" />
+    <Compile Include="Assets\Scripts\LoginManager\LoginDBOperation\UserInfoService.cs" />
     <Compile Include="Assets\Scripts\Scale\ScaleTiltControl.cs" />
     <Compile Include="Assets\Scripts\Scale\Scaletilt.cs" />
     <Compile Include="Assets\Scripts\Server\CreateServerObject.cs" />
@@ -166,6 +173,7 @@
     <Compile Include="Assets\Scripts\Trigger\r6RightTrigger.cs" />
     <Compile Include="Assets\Scripts\UI\ShowWeight.cs" />
     <Compile Include="Assets\Scripts\UI\TouchControl.cs" />
+    <Compile Include="Assets\Scripts\UserInfo\UserProgramInfo.cs" />
     <Compile Include="Assets\Scripts\Weight\WeightParamer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2012\UnityVS.CSharp.targets" />

@@ -93,7 +93,7 @@ public class QAManager : MonoBehaviour {
             return;
         }
         //加上用户名
-        inputFiled = "用户" + Random.Range(0, 100)+":" + inputFiled;
+        inputFiled = UserProgramInfo.userInfo.studentName+ ":" + inputFiled;
         //发送到服务端，然服务端处理
         qaMessage.SendMsg(inputFiled);
 
