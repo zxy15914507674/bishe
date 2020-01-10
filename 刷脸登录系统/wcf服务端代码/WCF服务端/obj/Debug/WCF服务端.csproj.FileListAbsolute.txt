@@ -1,0 +1,8 @@
+E:\VS2012Project\WCF服务端\WCF服务端\bin\Debug\WCF服务端.exe.config
+E:\VS2012Project\WCF服务端\WCF服务端\bin\Debug\WCF服务端.exe
+E:\VS2012Project\WCF服务端\WCF服务端\bin\Debug\WCF服务端.pdb
+E:\VS2012Project\WCF服务端\WCF服务端\bin\Debug\DotNetSpeech.dll
+E:\VS2012Project\WCF服务端\WCF服务端\obj\Debug\WCF服务端.csprojResolveAssemblyReference.cache
+E:\VS2012Project\WCF服务端\WCF服务端\obj\Debug\WCF服务端.exe
+E:\VS2012Project\WCF服务端\WCF服务端\obj\Debug\WCF服务端.pdb
+E:\VS2012Project\WCF服务端\WCF服务端\bin\Debug\CookComputing.XmlRpcV2.dll

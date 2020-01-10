@@ -1,0 +1,86 @@
+﻿import base64
+from  xmlrpc.server import SimpleXMLRPCServer
+import cv2
+import numpy as np
+from chatterbot import ChatBot 
+from chatterbot.trainers import ListTrainer
+import FaceRecognition
+
+chatbot = ChatBot("Training demo",read_only=True)
+chatbot.set_trainer(ListTrainer)
+chatbot.train([
+    "实验原理",
+    "实验原理请看实验前的知道",
+    "你好",
+    "你也很好呀",
+    "砝码放的位置",
+    "左物右码"
+])
+
+#问答系统的获取问题答案
+def getAnswer(question):
+    response = chatbot.get_response(question)
+    response_str=""+str(response)
+    return  response_str
+#问答系统的训练问题
+def trainQA(questionAndAnswer):
+    print(questionAndAnswer)
+    questionAndAnswerArray=eval(questionAndAnswer)
+    question=questionAndAnswerArray[0]
+    answer=questionAndAnswerArray[1]
+    trainList=[question,answer]
+    chatbot.train(trainList)
+    
+#人脸注册  
+def FaceRegistration(imgAndface_id):
+    imgAndface_idArray=eval(imgAndface_id)
+    image1=imgAndface_idArray[0]
+    image2=imgAndface_idArray[1]
+    image3=imgAndface_idArray[2]
+    
+    face_id=imgAndface_idArray[3]
+    
+    
+    image1= base64.b64decode(image1)
+    imga1 = np.frombuffer(image1, np.uint8)
+    img1=cv2.imdecode(imga1,cv2.IMREAD_COLOR)
+    
+    image2= base64.b64decode(image2)
+    imga2 = np.frombuffer(image2, np.uint8)
+    img2=cv2.imdecode(imga2,cv2.IMREAD_COLOR)
+    
+    image3= base64.b64decode(image3)
+    imga3 = np.frombuffer(image3, np.uint8)
+    img3=cv2.imdecode(imga3,cv2.IMREAD_COLOR)
+    
+    
+    
+    face_id1=face_id+'.1'
+    face_id2=face_id+'.2'
+    face_id3=face_id+'.3'
+    
+    FaceRecognition.data_collection(img1,face_id1)
+    FaceRecognition.data_collection(img2,face_id2)
+    FaceRecognition.data_collection(img3,face_id3)
+    
+    
+    FaceRecognition.face_training()
+
+#人脸登录
+def FaceLogin(image):
+    image= base64.b64decode(image)
+    imga = np.frombuffer(image, np.uint8)
+    img=cv2.imdecode(imga,cv2.IMREAD_COLOR)
+    result=FaceRecognition.face_ientification(img)
+    return result
+
+
+if __name__ == '__main__' :
+    server = SimpleXMLRPCServer(("",666), allow_none=True)
+    server.register_function(getAnswer, "getAnswer")
+    server.register_function(trainQA, "trainQA")
+    
+    server.register_function(FaceRegistration, "FaceRegistration")
+    server.register_function(FaceLogin, "FaceLogin")
+    
+    server.serve_forever()

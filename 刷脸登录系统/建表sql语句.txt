@@ -1,0 +1,8 @@
+create Table UserInfo
+(id int  primary key auto_increment,
+studentNumber varchar(20) not null,
+studentName varchar(10) not null,
+pwd varchar(50) not null
+)
+default charset=utf8;
+
