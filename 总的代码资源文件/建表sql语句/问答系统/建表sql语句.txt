@@ -1,0 +1,8 @@
+create table QA(id int primary key auto_increment,question varchar(1000),answer varchar(1000),
+ ignoreFlag tinyint,hasAnswer tinyint,addTime datetime
+)default charset=utf8;
+
+
+
+插入数据测试
+insert into QA(question,answer,ignoreFlag,hasAnswer,addTime) values('你好，我是张祥裕','',0,0,now());
