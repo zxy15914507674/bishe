@@ -86,6 +86,8 @@ public class CommonLoginManager : MonoBehaviour {
   
             if (userInfo!= null)
             {
+                //保存登录用户的信息
+                UserProgramInfo.userInfo = userInfo;
                 //进行场景的切换
                 UnityEngine.SceneManagement.SceneManager.LoadScene(SceneLoginToName);
             }

@@ -90,7 +90,17 @@ namespace textchat
 
     //发送输入的文本
     private void BtnSendClick() {
-        SendMessageToServer(UserProgramInfo.userInfo.studentName, inputMsg.text.Trim());
+        try
+        {
+            SendMessageToServer(UserProgramInfo.userInfo.studentName, inputMsg.text.Trim());
+        }
+        catch (System.Exception ex)
+        {
+
+            Debug.LogError("文本消息发送失败!" + ex);
+        }
+       
+        
         //发送后清空文本
         inputMsg.text = "";
     }

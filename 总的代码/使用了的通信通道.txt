@@ -1,0 +1,7 @@
+文字聊天使用了short.MaxValue-3
+
+问答系统使用了short.MaxValue - 4
+
+习题系统发送命令使用了 short.MaxValue - 1
+
+习题系统上下一题指令使用了  short.MaxValue - 2
