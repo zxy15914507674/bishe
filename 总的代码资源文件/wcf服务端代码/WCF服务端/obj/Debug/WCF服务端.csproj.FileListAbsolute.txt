@@ -6,3 +6,6 @@ E:\VS2012Project\WCF服务端\WCF服务端\obj\Debug\WCF服务端.csprojResolveA
 E:\VS2012Project\WCF服务端\WCF服务端\obj\Debug\WCF服务端.exe
 E:\VS2012Project\WCF服务端\WCF服务端\obj\Debug\WCF服务端.pdb
 E:\VS2012Project\WCF服务端\WCF服务端\bin\Debug\CookComputing.XmlRpcV2.dll
+F:\GitProject\毕设\总的代码资源文件\wcf服务端代码\WCF服务端\bin\Debug\WCF服务端.exe.config
+F:\GitProject\毕设\总的代码资源文件\wcf服务端代码\WCF服务端\obj\Debug\WCF服务端.exe
+F:\GitProject\毕设\总的代码资源文件\wcf服务端代码\WCF服务端\obj\Debug\WCF服务端.pdb
