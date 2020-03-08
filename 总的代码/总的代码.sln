@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "总的代码.CSharp", "总的代码.CSharp.csproj", "{2FCD702C-2F5C-DE98-9CCA-C5E871735264}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "总的代码", "Assembly-CSharp.csproj", "{558FD9A8-9B65-138E-05FE-0F8310E3077A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2FCD702C-2F5C-DE98-9CCA-C5E871735264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2FCD702C-2F5C-DE98-9CCA-C5E871735264}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2FCD702C-2F5C-DE98-9CCA-C5E871735264}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2FCD702C-2F5C-DE98-9CCA-C5E871735264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{558FD9A8-9B65-138E-05FE-0F8310E3077A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{558FD9A8-9B65-138E-05FE-0F8310E3077A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{558FD9A8-9B65-138E-05FE-0F8310E3077A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{558FD9A8-9B65-138E-05FE-0F8310E3077A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

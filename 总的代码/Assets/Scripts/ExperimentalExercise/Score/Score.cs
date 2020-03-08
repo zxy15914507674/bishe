@@ -10,10 +10,12 @@ namespace fvc.exp.score
     public class Score
     {
         private float _ConvertScore = 20f;                      //折合的分数
+       
         /// <summary>
-        /// 计算分数
+        /// 计算分数并获取详细信息
         /// </summary>
-        public float CalculateScore()
+        /// <returns>详细成绩信息</returns>
+        public string GetScoreMsg()
         {
             float ScoreSum = 0;
 
@@ -103,13 +105,13 @@ namespace fvc.exp.score
                             completionQuestionScoreInfo.answerDic[index]=answerList[index];
 
                             //避免重复添加
-                            for (int listIndex = StateStaticParams.CompletionScoreInfoList.Count - 1; listIndex >= 0; listIndex--)
-                            {
-                                if (StateStaticParams.CompletionScoreInfoList[listIndex].errorNumber == completionQuestionScoreInfo.errorNumber)
-                                {
-                                    StateStaticParams.CompletionScoreInfoList.Remove(StateStaticParams.CompletionScoreInfoList[listIndex]);
-                                }
-                            }
+                            //for (int listIndex = StateStaticParams.CompletionScoreInfoList.Count - 1; listIndex >= 0; listIndex--)
+                            //{
+                            //    if (StateStaticParams.CompletionScoreInfoList[listIndex].errorNumber == completionQuestionScoreInfo.errorNumber)
+                            //    {
+                            //        StateStaticParams.CompletionScoreInfoList.Remove(StateStaticParams.CompletionScoreInfoList[listIndex]);
+                            //    }
+                            //}
                             //把错误的信息添加进集合中
                             StateStaticParams.CompletionScoreInfoList.Add(completionQuestionScoreInfo);
 
@@ -118,9 +120,10 @@ namespace fvc.exp.score
                 }
             }
 
-            _ShowScoreMessage(ScoreSum);
-            ScoreSum = _ConvertScore * (ScoreSum / _CalculateTotalScore());                   //进行分数的折合
-            return ScoreSum;
+            //_ShowScoreMessage(ScoreSum);
+            //ScoreSum = _ConvertScore * (ScoreSum / _CalculateTotalScore());                   //进行分数的折合
+           return  _GetScoreMessage(ScoreSum);
+          
         }
 
 
@@ -155,6 +158,47 @@ namespace fvc.exp.score
             return ScoreSum;
         }
 
+
+        /// <summary>
+        /// 获取成绩的详细信息
+        /// </summary>
+        /// <param name="ScoreSum">输入的总分</param>
+        /// <returns>返回信息列表（包括总分、错误信息信息）</returns>
+        private string _GetScoreMessage(float ScoreSum) {
+            string scoreMsg = "习题满分为: " + _CalculateTotalScore()+"\n"+"您的得分为:  "+ScoreSum;
+            System.Text.StringBuilder bulider = new System.Text.StringBuilder();
+
+            bulider.Append("选择题:"+"\n");
+
+            //测试选择题
+            if (StateStaticParams.ChoiceQuestionScoreInfoList != null && StateStaticParams.ChoiceQuestionScoreInfoList.Count > 0)
+            {
+                foreach (var infoItem in StateStaticParams.ChoiceQuestionScoreInfoList)
+                {
+                    //Debug.Log("错误的题号是: " + infoItem.errorNumber + "   您的答案为:" + infoItem.userAnswer + "   正确答案为:" + infoItem.answer + "   该题的分值为:" + infoItem.score);
+                    bulider.Append("错误的题号" + infoItem.errorNumber + ":   您的答案为:" + infoItem.userAnswer + "   正确答案为:" + infoItem.answer + "\n");
+                }
+            }
+
+            bulider.Append("\n"+"填空题:"+"\n");
+            //测试填空题
+            if (StateStaticParams.CompletionScoreInfoList != null && StateStaticParams.CompletionQuestionList.Count > 0)
+            {
+                foreach (var infoItem in StateStaticParams.CompletionScoreInfoList)
+                {
+                    foreach (var item in infoItem.userAnswerDic)
+                    {
+                        //Debug.Log("题号为: " + infoItem.errorNumber + "的第" + (item.Key + 1) + "个空错了" + "  您的答案是: " + item.Value + "   正确答案是:" + infoItem.answerDic[item.Key]);
+                        bulider.Append("错误的题号" + infoItem.errorNumber + ":   第" + (item.Key + 1) + "个空错了" + "  您的答案是: " + item.Value + "   正确答案是:" + infoItem.answerDic[item.Key]+"\n");
+                    }
+                }
+            }
+            //Debug.Log(scoreMsg);
+            //Debug.Log(bulider.ToString());
+            return scoreMsg+"&"+bulider.ToString();
+        
+        }
+
         /// <summary>
         /// 测试使用  
         /// </summary>
@@ -162,7 +206,7 @@ namespace fvc.exp.score
         private void _ShowScoreMessage(float ScoreSum)
         {
             Debug.Log("没折合时得到的总分:"+ScoreSum);
-            Debug.Log("没折合时习题的总分: " + _CalculateTotalScore());
+            Debug.Log("习题满分为: " + _CalculateTotalScore());
             
             ScoreSum=_ConvertScore*(ScoreSum/_CalculateTotalScore());
            
@@ -173,7 +217,7 @@ namespace fvc.exp.score
             {
                 foreach (var infoItem in StateStaticParams.ChoiceQuestionScoreInfoList)
                 {
-                    Debug.Log("错误的题号是: "+infoItem.errorNumber+"   您的答案为:"+infoItem.userAnswer+  "   正确答案为:"+infoItem.answer+"   该题的分值为:"+infoItem.score);
+                    Debug.Log("选择题：错误的题号是: "+infoItem.errorNumber+"   您的答案为:"+infoItem.userAnswer+  "   正确答案为:"+infoItem.answer+"   该题的分值为:"+infoItem.score);
                 }
             }
 
@@ -184,7 +228,7 @@ namespace fvc.exp.score
                 {
                     foreach (var item in infoItem.userAnswerDic)
                     {
-                        Debug.Log("题号为: "+infoItem.errorNumber+"的第"+(item.Key+1)+"个空错了"+"  您的答案是: "+item.Value+"   正确答案是:"+infoItem.answerDic[item.Key]);
+                        Debug.Log("填空题：题号为: "+infoItem.errorNumber+"的第"+(item.Key+1)+"个空错了"+"  您的答案是: "+item.Value+"   正确答案是:"+infoItem.answerDic[item.Key]);
                     }
                 }
             }

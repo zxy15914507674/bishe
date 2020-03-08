@@ -60,6 +60,20 @@ namespace fvc.exp.state
                                       
                // FVCStateStaticParams.currentQuestionType = FVCQuestionType.ShortAnswerQuestion;
                 StateStaticParams.currentQuestionType = QuestionType.Null;
+
+                if (GameObject.Find("CompletionQuestionUI/BtnNext/Text").GetComponent<Text>().text == "提  交")
+                {
+                    Debug.Log("提交答案");
+                    string scoreMsg=new fvc.exp.score.Score().GetScoreMsg();
+                    string[] msg = scoreMsg.Split('&');
+                    scoreMsg = msg[0];
+                    string errorMsg=msg[1];
+                    Debug.Log(scoreMsg);
+                    Debug.Log(errorMsg);
+                    GameObject.Find("ScoreMsgUI").GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
+                    GameObject.Find("MsgShowBg/TxtMsg").GetComponent<Text>().text = scoreMsg + "\n"+"\n"+ errorMsg;
+                    return;
+                }
             }
 
             if (_NumberCount >= 0 && _NumberCount < StateStaticParams.CompletionQuestionList.Count - 1)
