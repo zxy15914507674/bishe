@@ -17,13 +17,11 @@ Chapter 2 Related implementation technology
       2.2.3 Data interaction between C and python
     2.3 MYSQL database
     2.4 Chapter Summary
-Chapter 3 Platform function module requirements overview
-   3.1 Face login module
-   3.2 Chat room module
-   3.3 Intelligent voice module
-   3.4 Intelligent question answering module
-   3.5 The realization of the face login module
-   3.6 Chapter Summary
+Chapter 3 Platform function design scheme
+   3.1 Requirement analysis of the platform
+   3.2 Platform design goals
+   3.3 Function design of the platform
+   3.4 Chapter Summary
 Chapter 4 Realization of each function module of the platform
    4.1 The realization of the face login module
       4.1.1 The realization of face recognition server
