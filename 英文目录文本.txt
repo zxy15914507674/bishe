@@ -14,7 +14,7 @@ Chapter 2 Related implementation technology
     2.2 Programming language mixed programming
       2.2.1 C# programming
       2.2.2 Python programming
-      2.2.3 Data interaction between C and python
+      2.2.3 Data interaction between C# and python
     2.3 MYSQL database
     2.4 Chapter Summary
 Chapter 3 Platform function design scheme
@@ -40,7 +40,7 @@ Chapter 4 Realization of each function module of the platform
       4.5.4 The realization of training module of answer and answer to question
    4.6 Realization of collaborative exercise module
       4.6.1 The realization of set question module
-      4.6.2 The implementation of collaborative exercise loading and exercise module
+      4.6.2 collaborative exercise loading and exercise module implementation
    4.7 Chapter Summary
 Chapter 5 An application example of balance experiment
    5.1 Platform architecture
@@ -53,7 +53,10 @@ Summary and Forecast
      Forecast
 Reference
 
+Papers published during the degree
+
 Paper originality declaration
 
 Paper Copyright use authorization declaration
+
 Acknowledgments
