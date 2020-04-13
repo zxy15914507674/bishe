@@ -113,7 +113,7 @@ namespace DAL
             {
                 return SqlHelper.Update(sql);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 
                 throw;
