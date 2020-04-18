@@ -5,24 +5,19 @@ Chapter 1 Introduction
       1.2.2 Research status abroad
    1.3 Main contents of the research
    1.4 Organizational structure of the paper
-Chapter 2 Related implementation technology
-    2.1 Network communication technology
-      2.1.1 Socket basic communication technology
-      2.1.2 WCF technology
-      2.1.3 XML-RPC technology
-      2.1.4 UNET Technology of Unity3D
-    2.2 Programming language mixed programming
-      2.2.1 C# programming
-      2.2.2 Python programming
-      2.2.3 Data interaction between C# and python
-    2.3 MYSQL database
+Chapter 2 Related technical foundation
+    2.1 Technical basis of collaborative algorithm
+    2.2 Virtual experiment technology
+      2.2.1 VR technology
+      2.2.2 UNET Technology of Unity3D
+    2.3 Data interaction between C# and python
     2.4 Chapter Summary
-Chapter 3 Platform function design scheme
+Chapter 3 Intelligent Collaborative scheme design
    3.1 Requirement analysis of the platform
-   3.2 Platform design goals
-   3.3 Function design of the platform
+   3.2 Design goals
+   3.3 Function design
    3.4 Chapter Summary
-Chapter 4 Realization of each function module of the platform
+Chapter 4 Implementation of intelligent collaboration module
    4.1 The realization of the face login module
       4.1.1 The realization of face recognition server
       4.1.2 The implementation of WCF server
@@ -43,7 +38,7 @@ Chapter 4 Realization of each function module of the platform
       4.6.2 collaborative exercise loading and exercise module implementation
    4.7 Chapter Summary
 Chapter 5 An application example of balance experiment
-   5.1 Platform architecture
+   5.1 Structure of balance experiment function module
    5.2 Design of virtual experiment environment
       5.2.1 3D intelligent prompt
       5.2.2 Demonstration of experimental results
