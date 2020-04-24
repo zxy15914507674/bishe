@@ -8,3 +8,11 @@ git add  xxx
 3 上传到仓库
 
 git push https://github.com/zxy15914507674/bishe.git master
+
+4 查看历史版本
+git log     查看所有的历史版本，一般不用
+git log -x  查询x个最新的版本，x为最新的数量，从上往下
+
+5 回退到某个历史版本
+git reset --hard  版本对应的号码
+
