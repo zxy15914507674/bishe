@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root>
+    <!--数据库连接字符串-->
+  <ConnectionString>data source=106.54.226.253;database=unity;user id=root;password=123456;charset=utf8</ConnectionString>
+  
+</root>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<hand>
+	<indx>        <!--食指关节名称，从里到指尖-->
+		<indx_k31>INDX K3 1</indx_k31> 
+		<indx_k21>INDX K2 1</indx_k21> 
+		<indx_k11>INDX K1 1</indx_k11> 		
+	</indx>
+	<midl>         <!--中指关节名称，从里到指尖-->
+		<midl_k31>MIDL K3 1</midl_k31> 
+		<midl_k21>MIDL K2 1</midl_k21> 
+		<midl_k11>MIDL K1 1</midl_k11> 		
+	</midl>
+	<pnky>         <!--小指关节名称，从里到指尖-->
+		<pnky_k31>PNKY K3 1</pnky_k31> 
+		<pnky_k21>PNKY K2 1</pnky_k21> 
+		<pnky_k11>PNKY K1 1</pnky_k11> 		
+	</pnky>
+	<ring>          <!--无名指关节名称，从里到指尖-->
+		<ring_k31>RING K3 1</ring_k31> 
+		<ring_k21>RING K2 1</ring_k21> 
+		<ring_k11>RING K1 1</ring_k11> 		
+	</ring>
+
+	<thmb>          <!--拇指关节名称，从里到指尖-->
+		<thmb_k21>THMB K2 1</thmb_k21> 
+		<thmb_k11>THMB K1 1</thmb_k11> 		
+	</thmb>
+</hand>

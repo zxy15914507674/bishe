@@ -1,0 +1,71 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   Intel
+    VRAM:     1008 MB
+    Driver:   20.19.15.4463
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\I18N.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\I18N.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\I18N.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\I18N.West.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\I18N.West.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\MySql.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\MySql.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\NAudio.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\NAudio.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Data.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Data.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Drawing.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Drawing.dll into Unity Child Domain
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.ServiceModel.dll (this message is harmless)
+Loading F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.ServiceModel.dll into Unity Child Domain
+- Completed reload, in  0.201 seconds
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.068963 ms
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Xml.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.IdentityModel.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\Mono.Security.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Transactions.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Configuration.dll (this message is harmless)
+Platform assembly: F:\GitProject\毕设\毕业答辩相关文件\智能协同仿真系统\Main_Data\Managed\System.Security.dll (this message is harmless)
+[WAV: LeftChannel=System.Single[], RightChannel=, ChannelCount=1, SampleCount=114652, Frequency=11025]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1994 -> priority: 1 
+Could not start graph
+ 
+(Filename:  Line: 1928)
+
+Could not pause pControl
+ 
+(Filename:  Line: 382)
+
+析构函数调用
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+析构函数调用
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
